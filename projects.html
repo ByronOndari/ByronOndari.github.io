@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activities</title>
+    <link rel="stylesheet" type="text/css" href="stylesprojects.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/v4/icons/">
+    <link rel="canonical" href="https://fontawesome.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus Jakarta Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat Alternates">
+    <script src="https://kit.fontawesome.com/7b668c6785.js"></script>
+</head>
+<body>
+    <div class="header" id="home">
+        <nav>
+            <div class="head-logo"><a href="index.html"><img src="images/Bioinformatica_Hub_Logo.png" alt="Logo"></a>
+                <p><b>BHKi</b>
+                    <br>Think It, Code It!!!</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars fa-fade"></i>
+            </label>
+            <input type="checkbox" id="check">
+            <script>
+                const checkBtn = document.getElementById('check');
+                const navMenu = document.querySelector('.nav-menu');
+                const checkBtnIcon = document.querySelector('.checkbtn i');
+
+                checkBtn.addEventListener('click', function() {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    checkBtnIcon.classList.remove('fa-times');
+                    checkBtnIcon.classList.add('fa-bars');
+                } else {
+                    navMenu.classList.add('active');
+                    checkBtnIcon.classList.remove('fa-bars');
+                    checkBtnIcon.classList.add('fa-times');
+                }
+                });
+            </script>
+            <script>
+                const menuBtn = document.querySelector('.checkbtn');
+                const closeBtn = document.querySelector('.close-btn');
+
+                // toggle menu
+                checkBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                });
+
+                // close menu
+                closeBtn.addEventListener('click', function() {
+                navMenu.classList.remove('show');
+                });
+
+            </script>
+        </nav>
+    </div>
+
+    <div class="head-text">
+        <h1>BHKi - Think It, Code It!!!</h1>
+        <p>Why you should join BHKi</p>
+    </div>    
+    
+
+
+    <!----Resources------>
+    <section class="Outreaches">
+        <h1>University/Campus Outreaches</h1>
+        <p>
+        The goal of the outreaches stems from BHKi's primary objective, which is to close the knowledge gap between early-career researchers and bioinformatics experts. 
+        In this regard, we aim to sensitize and educate undergraduates about bioinformatics and open science. Our target is universities offering life science and computer science
+        courses at the undergraduate level and the program encompasses brief introductions to bioinformatics and open science, the trends in the fields, and use cases worldwide.
+        
+        </p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+    </section>
+
+    <!----Science Cafes and Tool hub------>
+    <section class="sciencecafes"> 
+        <h1>Science Cafes and Tool Hub</h1>
+        <p>
+            The Science Cafe is a monthly virtual presentation done by our members of their work. The tool hub is a technical series following the science cafes that involves training
+            and presentation of various bioinformatics tools to do different analyses. The aim of these events is to encourage members to share their work and embrace collaboration with experts
+            and other researchers.
+        </p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+        <br>
+    </section>
+
+    <!----Resources------>
+    <section class="skills">
+        <h1>Capacity Building: Empowering researchers skills workshops and seminars</h1>
+        <p>
+            We need properly skilled researchers to carry out research and come up with solutions specific to our regions. The goal of our training is to impart researchers with bioinformatics 
+            skills they require to carry out research projects and produce useful output.     
+            Our workshops are centered around:
+            <ol>
+                <li>Programming: Python, R, Bash scripting</li>
+                <li>Data analysis: Metagenomics, Phylogenetics, transcriptomics, epigenetics, and more. </li>
+                <li>Publishing and presenting scientific research. </li>
+            </ol>
+            We also develop curriculum for training
+            Check out some of our training on our YouTube channel.   
+        </p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+    </section>
+
+    <!----BioHackFiesta------>
+    <section class="hackathon">
+        <h1>BioHackFiesta: Monthly Bioinformatics Codeathons</h1>
+        <p>
+            Practice makes perfect! The BioHackFiesta is a series of hackathons we will be doing to encourage innovation and out of the box thinking in our members. 
+        </p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+    </section>
+
+
+    <!----------Footer------------->
+    <footer class="footer" id="scroll-section">
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <img src="images/Bioinformatica_Hub_Logo.png" alt="BHKi Logo">
+                </div>
+                <div class="logo-name">
+                    <span class="logo-name">Bioinformatics Hub of Kenya Initiative(BHKi)</span>
+                </div>
+                <div class="media-icons">
+                    <a href="https://twitter.com/BioinfoHub_KE"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/bioinformatics-hub-of-kenya-initiative/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://youtube.com/channel/UCWvCsVW7BF3Nml5VpLOdU5g"><i class="fab fa-youtube"></i></a>                    
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box2">
+                    <li class="link_name">Links</li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+                <ul class="box2">
+                    <li class="link_name">Email Us</li>
+                    <li><a href="mailto:bioinformaticshubofkenya@gmail.com">bioinformaticshubofkenya</a></li>
+                </ul>
+                <ul class="box2">
+                    <li class="link_name">Contribute</li>
+                    <li><a href="donate.html">DONATE</a></li>
+                    <li><a href="#">JOIN US</a></li>
+                </ul>
+                <script>
+                    function sendEmail() {
+                        var email = document.getElementById("email").value;
+                        if (email === '') {
+                            alert("Please enter your email.");
+                            return;
+                        }
+                        var subject = "New email subscription";
+                        var body = "A new user has subscribed with email: " + email;
+                        var mailtoLink = "mailto:chat123@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                        window.location.href = mailtoLink;
+                        alert("Thank you for subscribing with email: " + email);
+                        document.getElementById("email").value = "";
+                    }
+                </script>
+                    
+                    
+                <ul class="box2 input-box">
+                    <li class="link_name">Subscribe</li>
+                    <li><input type="text" required id="email" placeholder="Enter your email"></li>
+                    <li><input type="button" onclick="sendEmail()" value="Subscribe"></li>
+                </ul>
+                                    
+                
+            </div>
+        </div>
+        <div class="bottom-copyright">
+            <div class="bottom-details">
+                <span class="copyright_text">Copyright &#169; 2023 | BHKi | All Rights Reserved
+                    <span class="dev_text">Made by <a href="https://github.com/ByronOndari">Byron Ondari</a>and Karega Pauline</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

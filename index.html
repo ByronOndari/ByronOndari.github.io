@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BHKi - Think It, Code It!!</title>
+    <link rel="icon" type="image/x-icon" href="images/Bioinformatica_Hub_Logo.png">
+    <link rel="stylesheet" href="styleshome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/v4/icons/">
+    <link rel="canonical" href="https://fontawesome.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus Jakarta Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat Alternates">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint">
+
+    <script src="https://kit.fontawesome.com/7b668c6785.js"></script>
+</head>
+
+<body>
+    <div class="header" id="home">
+        <nav>
+            <div class="head-logo"><a href="index.html"><img src="images/Bioinformatica_Hub_Logo.png" alt="Logo"></a>
+                <p><b>BHKi</b>
+                    <br>Think It, Code It!!!</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><b>Home</b></a></li>
+                <li><a href="blog.html"><b>Blog</b></a></li>
+                <li><a href="contactus.html"><b>Contact Us</b></a></li>
+                <li><a href="about.html"><b>About</b></a></li>
+                <li><a href="donate.html"><b>DONATE</b></a></li>
+            </ul>
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars fa-fade"></i>
+            </label>
+            <input type="checkbox" id="check">
+            <script>
+                const checkBtn = document.getElementById('check');
+                const navMenu = document.querySelector('.nav-menu');
+                const checkBtnIcon = document.querySelector('.checkbtn i');
+
+                checkBtn.addEventListener('click', function() {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    checkBtnIcon.classList.remove('fa-times');
+                    checkBtnIcon.classList.add('fa-bars');
+                } else {
+                    navMenu.classList.add('active');
+                    checkBtnIcon.classList.remove('fa-bars');
+                    checkBtnIcon.classList.add('fa-times');
+                }
+                });
+            </script>
+            <script>
+                const menuBtn = document.querySelector('.checkbtn');
+                const closeBtn = document.querySelector('.close-btn');
+
+                // toggle menu
+                checkBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                });
+
+                // close menu
+                closeBtn.addEventListener('click', function() {
+                navMenu.classList.remove('show');
+                });
+
+            </script>
+        </nav>
+<!--
+        <nav class="navbar">
+            <div class="content">
+              <div class="logo">
+                <a href="#">CodingNepal</a>
+              </div>
+              <ul class="menu-list">
+                <div class="icon cancel-btn">
+                  <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+        </nav>
+
+        <script>
+            const body = document.querySelector("body");
+            const navbar = document.querySelector(".navbar");
+            const menuBtn = document.querySelector(".menu-btn");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            menuBtn.onclick = ()=>{
+              navbar.classList.add("show");
+              menuBtn.classList.add("hide");
+              body.classList.add("disabled");
+            }
+            cancelBtn.onclick = ()=>{
+              body.classList.remove("disabled");
+              navbar.classList.remove("show");
+              menuBtn.classList.remove("hide");
+            }
+        </script>
+-->
+        
+        <div class="text-box">
+            <h1 class="anim">Bioinformatics Hub Of Kenya Initiative</h1>
+            <p class="anim">BHKi bridges the gap between well established bioinformaticians
+                <br>and aspiring ones through peer training and mentorship
+                <br>so as to enhance collaborations to foster quality
+                <br>scientific research and innovations and
+                <br>promote the sharing of data,
+                <br>skills and codes.</p>
+            <div class="button1">
+                <a href="#scroll-section"><button class="anim">Subscribe to Our Newsletter</button></a>
+            </div>
+
+        </div>
+    </div>
+    <!---
+    <div class="visioncard">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p class="title">FLIP CARD</p>
+                    <p>Hover Me</p>
+                </div>
+                <div class="flip-card-back">
+                    <p class="title">BACK</p>
+                    <p>Leave Me</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p class="title">FLIP CARD</p>
+                    <p>Hover Me</p>
+                </div>
+                <div class="flip-card-back">
+                    <p class="title">BACK</p>
+                    <p>Leave Me</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page">
+        <div class="margin"></div>
+        <h2>VISION</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris risus, lobortis a neque aliquet, ornare rutrum purus. Integer hendrerit ac est non cursus. Integer quis risus tincidunt nunc mattis ultricies. Proin sed enim tellus.</p>
+    </div>
+    -->
+
+    <div class="visionmission">
+        <div class="vision">
+            <h1>Our Vision</h1><!--<span class="vertical-line"></span>>--->
+            <p>To be a vivacious, well-coordinated and enthusiastic hub that will develop bioinformatics and skills
+                <br> set through creating awareness, collaborations and capacity development.</p>
+        </div>
+        <!--
+        <div class="mission">
+            <h1>Our Mission</h1>
+            <p>Bridging the gap between well established bioinformaticians and aspiring ones through peer training and mentorship so as to enhance collaborations to foster quality scientific research and innovations and promote the sharing of data, skills and codes.</p>
+        </div>
+        -->
+    </div>
+
+    <div class="Insights">
+        <h1>BHKi - Think it, Code it!!!</h1>
+        <p>Why you should join BHKi</p>
+        <div class="bx">
+            <a href="projects.html">
+                <div  class="box"><span></span>
+                    <div class="content">   
+                        <h2>Resources</h2>
+                        <p>A knowledge hub about Bioinformatics.</p>
+                    
+                </div>
+            </a>
+            </div>
+            <a href="projects.html">
+                <div class="box"><span></span>
+                    <div class="content">
+                        <h2>Events</h2>
+                        <p>Upcoming bioinformatics events and conferences.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="projects.html">
+                <div class="box"><span></span>
+                    <div class="content">
+                        <h2>Research</h2>
+                        <p>Tools and Learning materials.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="projects.html">
+                <div class="box"><span></span>
+                    <div class="content">
+                        <h2>Networking</h2>
+                        <p>Monthly meetups with BHKi.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="projects.html">
+                <div class="box"><span></span>
+                    <div class="content">
+                        <h2>Trainings</h2>
+                        <p>Early career mentorship for bioinformaticians.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+    <div class="patner">
+        <h1>Our Patners</h1>
+        <hr>
+        <div class="row">
+            <a href="https://twitter.com/OpenKe"><img src="images/OpenSciKE.jpg" alt="OpenSciKE" class="img5"></a>
+            <a href="https://africastalking.com/"><img src="images/africasTalkingLogo.jpg" alt="africastalking" class="img2"></a>
+            <a href="https://openlifesci.org/"><img src="images/OpenLifeSciLogo.jpg" alt="OpenLifeSci" class="img4"></a>
+            <a href="http://www.icipe.org/"><img src="images/icipe-logo.jpg" alt="icipe" class="img3"></a>
+            <a href="https://www.codeforsociety.org/"><img src="images/CodeforSociety.png" alt="CodeforSociety" class="img1"></a>
+        </div>
+    </div>
+
+
+    <footer class="footer" id="scroll-section">
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <img src="images/Bioinformatica_Hub_Logo.png" alt="BHKi Logo">
+                </div>
+                <div class="logo-name">
+                    <span class="logo-name">Bioinformatics Hub of Kenya Initiative(BHKi)</span>
+                </div>
+                <div class="media-icons">
+                    <a href="https://twitter.com/BioinfoHub_KE"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/bioinformatics-hub-of-kenya-initiative/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://youtube.com/channel/UCWvCsVW7BF3Nml5VpLOdU5g"><i class="fab fa-youtube"></i></a>                    
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box2">
+                    <li class="link_name">Links</li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+                <ul class="box2">
+                    <li class="link_name">Email Us</li>
+                    <li><a href="mailto:bioinformaticshubofkenya@gmail.com">bioinformaticshubofkenya</a></li>
+                </ul>
+                <ul class="box2">
+                    <li class="link_name">Contribute</li>
+                    <li><a href="donate.html">DONATE</a></li>
+                    <li><a href="#">JOIN US</a></li>
+                </ul>
+                <script>
+                    function sendEmail() {
+                        var email = document.getElementById("email").value;
+                        if (email === '') {
+                            alert("Please enter your email.");
+                            return;
+                        }
+                        var subject = "New email subscription.";
+                        var body = "Hello! \nI am subscribing to BHKi newsletter and would like to receive notifications on the following e-mail: " + email + "\n\n";
+                        var mailtoLink = "mailto:byronryan619@outlook.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                        window.location.href = mailtoLink;
+                        alert("Thank you for subscribing with email: " + email);
+                        document.getElementById("email").value = "";
+                    }
+                </script>
+                    
+                    
+                <ul class="box2 input-box">
+                    <li class="link_name">Subscribe</li>
+                    <li><input type="text" required id="email" placeholder="Enter your email"></li>
+                    <li><input type="button" onclick="sendEmail()" value="Subscribe"></li>
+                </ul>
+                                    
+                
+            </div>
+        </div>
+        <div class="bottom-copyright">
+            <div class="bottom-details">
+                <span class="copyright_text">Copyright &#169; 2023 | BHKi | All Rights Reserved
+                <span class="dev_text">Made by <a href="https://github.com/ByronOndari">Byron Ondari</a></span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
