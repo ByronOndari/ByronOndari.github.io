@@ -36,8 +36,7 @@ nav {
   padding: 0 100px;
   position: fixed;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(images/dna16.jpg);
+  background-color: rgba(255, 255, 255, 0.93);
   transition: top 0.3s;
 }
 
@@ -227,13 +226,14 @@ nav ul li a.active:hover {
 button {
   cursor: pointer;
   position: relative;
-  color: #00008b;
+  color: #fff;
   padding: .9em 2em;
   font-family: 'Montserrat';
   font-size: 15px;
-  background: #e8e8e8;
+  background: #00008b;
   border: 1px solid #e8e8e8;
   transition: all .3s;
+  border-radius: 30px;
 }
 
 button a {
@@ -242,7 +242,7 @@ button a {
 
 button:hover {
   border: 1px solid #e8e8e8;
-  background-color: #fff;
+  background-color: #00008b;
 }
 
 .anim {
@@ -343,18 +343,18 @@ button:hover {
 
 
 .visionmission {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/biology-g1.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/seminar5.jpg);
   background-size: cover;
   background-color: #fff;
-  height: 95vh;
+  height: 50vh;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
 .vision {
-  padding-top: 70px;
-  padding-bottom: 33px;
+  padding-top: 30px;
+  padding-bottom: 5px;
   justify-content: center;
   position: relative;
   text-align: center;
@@ -364,8 +364,8 @@ button:hover {
 .vision h1 {
   font-family: 'Montserrat';
   color: #00008b;
-  font-size: 40px;
-  margin-bottom: 2%;
+  font-size: 30px;
+  margin-bottom: .5%;
   text-align: center;
 }
 
@@ -386,8 +386,8 @@ button:hover {
 }
 
 .mission {
-  padding-top: 40px;
-  padding-bottom: 33px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   justify-content: center;
   position: relative;
   text-align: center;
@@ -397,8 +397,8 @@ button:hover {
 .mission h1 {
   font-family: 'Montserrat';
   color: #00008b;
-  font-size: 40px;
-  margin-bottom: 2%;
+  font-size: 30px;
+  margin-bottom: .5%;
   text-align: center;
 }
 
@@ -410,7 +410,7 @@ button:hover {
 
 @media(max-width: 900px) {
   .mission h1 {
-    font-size: 30px
+    font-size: 25px
   }
 
   .mission p {
@@ -421,19 +421,22 @@ button:hover {
 .drive h1 {
   font-family: 'Montserrat';
   color: #00008b;
-  font-size: 30px;
-  margin-bottom: 2%;
+  font-size: 25px;
+  margin-top: 2%;
+  margin-bottom: 1%;
   text-align: center;
 }
 
 .row {
   display: flex;
   margin-top: 30px;
+  padding: 0;
+  height: 40vh;
 }
 
 .column {
   flex: 1;
-  padding: 20px;
+  padding: 50px;
   color: #fff;
 }
 
@@ -486,7 +489,7 @@ button:hover {
 .Impact h2 {
   color: #00008b;
   font-size: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-family: 'Montserrat';
   text-align: center;
 }
@@ -512,8 +515,8 @@ button:hover {
 .cards {
   display: flex;
   flex-direction: row;
-  gap: 15px;
-  padding: 20px 0 20px 0;
+  gap: 30px;
+  padding: 5px 15px 10px 15px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -521,11 +524,11 @@ button:hover {
 }
 
 .cards .red {
-  background-color: #00008b;
+  background-color: #ffcc00;
 }
 
 .cards .blue {
-  background-color: #049ce8;
+  background-color: #00008b;
 }
 
 .cards .green {
@@ -539,7 +542,7 @@ button:hover {
   flex-direction: column;
   text-align: center;
   height: 150px;
-  width: 250px;
+  width: 500px;
   border-radius: 10px;
   color: white;
   cursor: pointer;
@@ -583,8 +586,8 @@ button:hover {
 }
 
 .Solution {
-  padding-top: 40px;
-  padding-bottom: 33px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 0 20px 0 20px;
   justify-content: center;
   position: relative;
@@ -615,17 +618,17 @@ button:hover {
 }
 
 .Impact {
-  width: 80vw;
+  width: 90vw;
   margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
-  background-color: #f8f8f8;
+  margin-bottom: 10px;
+  background-color: #ffcc00;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .Impact p {
@@ -645,7 +648,7 @@ button:hover {
 #counter {
   font-size: 60px;
   font-weight: bold;
-  color: #FFD700;
+  color: #00008b;
 }
 
 #target {
@@ -666,266 +669,13 @@ button:hover {
   }
 }
 
-.Insights {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  margin-top: 2%;
-  padding-top: 3%;
-  padding-bottom: 4%;
-  background: #fff
-}
-
-.Insights h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: #00008b;
-  font-family: 'Montserrat'
-}
-
-.Insights p {
-  color: #000;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 22px;
-  padding: 23px;
-  font-family: 'Montserrat'
-}
-
-@media(max-width: 900px) {
-  .Insights h1 {
-    font-size: 30px
-  }
-
-  .Insights p {
-    font-size: 14px
-  }
-}
-
-.row {
-  margin-top: 1%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px
-}
-
-@media(max-width: 700px) {
-  .row {
-    flex-direction: column
-  }
-}
-
-.bx {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 6%
-}
-
-.bx a {
-  text-decoration: none;
-}
-
-.box {
-  position: relative;
-  width: 220px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .5s;
-  z-index: 1
-}
-
-.box::before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  left: 50px;
-  width: 50%;
-  height: 100%;
-  text-decoration: none;
-  background: #fff;
-  border-radius: 8px;
-  transform: skewX(15deg);
-  transition: .5s
-}
-
-.box::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50px;
-  width: 50%;
-  height: 100%;
-  background: #fff;
-  border-radius: 8px;
-  transform: skewX(15deg);
-  transition: .5s;
-  filter: blur(30px)
-}
-
-.box:hover:before,
-.box:hover:after {
-  transform: skewX(0deg) scaleX(1.3)
-}
-
-.box:before,
-.box:after {
-  background: linear-gradient(315deg, gold, gold)
-}
-
-.box span {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 5;
-  pointer-events: none
-}
-
-.box span::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  transition: .1s;
-  animation: animate 2s ease-in-out infinite;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  top: -40px;
-  left: 40px;
-  width: 50px;
-  height: 50px;
-  opacity: 1
-}
-
-.box span::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  transition: .5s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  animation-delay: -1s
-}
-
-.box span:after {
-  bottom: -40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
-  opacity: 1
-}
-
-.box .content {
-  position: relative;
-  width: 190px;
-  height: 254px;
-  padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 1;
-  transform: .5s;
-  color: #00008b;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center
-}
-
-.box .content h2 {
-  font-size: 22px;
-  color: #00008b;
-  margin: 10px 0
-}
-
-.box .content p {
-  font-size: 16px;
-  text-align: center;
-  color: #00008b;
-  position: relative
-}
-
-/* For mobile devices */
-@media screen and (max-width: 767px) {
-  .bx {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .box {
-    margin: 10px;
-    width: 100%;
-    height: auto;
-  }
-
-  .box .content {
-    background: linear-gradient(315deg, gold, gold)
-  }
-
-  .box:before,
-  .box:after {
-    display: none;
-  }
-}
-
-/* For tablet devices */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .bx {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .box {
-    margin: 10px;
-    width: calc(50% - 20px);
-    height: auto;
-  }
-
-  .box:before,
-  .box:after {
-    display: none;
-  }
-}
-
-/* For desktop devices */
-@media screen and (min-width: 1024px) {
-  .bx {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .box {
-    width: 220px;
-    height: 300px;
-    margin: 0;
-  }
-}
-
-
-
 .patner {
   width: 90%;
   text-align: center;
   margin-left: 5%;
   margin-top: 5%;
-  padding-top: 3%;
-  padding-bottom: 4%;
+  padding-top: 0;
+  padding-bottom: 1%;
   background: #fff;
   margin-bottom: 5%
 }
@@ -936,9 +686,10 @@ button:hover {
   color: #00008b
 }
 
-.patner .row {
+.patner .row2 {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .patner .img1 {
