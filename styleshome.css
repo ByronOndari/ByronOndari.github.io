@@ -343,7 +343,7 @@ button:hover {
 
 
 .visionmission {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/seminar5.jpg);
+  /*background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/seminar5.jpg);*/
   background-size: cover;
   background-color: #fff;
   height: 50vh;
