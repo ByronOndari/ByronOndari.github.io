@@ -124,9 +124,9 @@ nav ul li a.active:hover {
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    top: 100px;
-    left: -50%;
-    width: 50%;
+    top: 80px;
+    left: -110%;
+    width: 100vw;
     height: 70vh;
     background-color: rgba(255, 255, 255, 0.99);
     text-align: center;
@@ -146,7 +146,7 @@ nav ul li a.active:hover {
   }
 
   .nav-menu.active {
-    left: 25%;
+    left: 0%;
   }
 
   .close-btn {
@@ -200,7 +200,7 @@ nav ul li a.active:hover {
   color: #000;
   text-align: center;
   animation-delay: .5s;
-  margin-bottom: 7%
+  margin-bottom: 3%
 }
 
 @media(max-width: 900px) {
@@ -212,8 +212,12 @@ nav ul li a.active:hover {
     font-size: 14px
   }
 
+  .header {
+    background-size: contain;
+  }
+
   .button1 button {
-    font-style: 13px;
+    font-style: 12px;
   }
 }
 
@@ -243,6 +247,13 @@ button a {
 button:hover {
   border: 1px solid #e8e8e8;
   background-color: #00008b;
+}
+
+@media(max-width: 900px) {
+  .button1 button {
+    font-size: 11px;
+    margin-top: 30px;
+  }
 }
 
 .anim {
@@ -416,6 +427,9 @@ button:hover {
   .mission p {
     font-size: 14px
   }
+  .visionmission p {
+    font-size: 12px
+  }
 }
 
 .drive h1 {
@@ -456,21 +470,32 @@ button:hover {
 }
 
 
-@media(max-width: 900px) {
-  .drive h1 {
-    font-size: 25px
+/* Styles for mobile */
+@media (max-width: 767px) {
+  .drive {
+    padding: 0 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .column {
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .column h2 {
-    font-size: 18px
+    font-size: 20px;
   }
 
   .column h3 {
-    font-size: 16px
+    font-size: 18px;
   }
 
   .column p {
-    font-size: 13px
+    font-size: 14px;
   }
 }
 
@@ -662,6 +687,14 @@ button:hover {
     flex-direction: column;
   }
 
+  .section-content h2 {
+    font-size: 30px;
+  }
+
+  .section-content p {
+    font-size: 14px;
+  }
+
   .section-content,
   .section-counter {
     padding-right: 0;
@@ -669,87 +702,77 @@ button:hover {
   }
 }
 
+
+/* Styles for partners section */
+/* Styles for desktop */
 .patner {
   width: 90%;
   text-align: center;
-  margin-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 5%;
   padding-top: 0;
   padding-bottom: 1%;
   background: #fff;
-  margin-bottom: 5%
+  margin-bottom: 5%;
+  border-radius: 10px;
 }
 
 .patner h1 {
-  font-size: 50px;
-  font-family: 'Montserrat';
-  color: #00008b
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  color: #00008b;
+  margin-top: 20px;
+}
+
+.patner hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .patner .row2 {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
-.patner .img1 {
-  height: 80px;
-  width: 220px;
-  padding: 10px;
-}
-
-.patner .img2 {
-  height: 80px;
-  width: 170px;
-  padding: 10px;
-}
-
-.patner .img3 {
-  height: 80px;
-  width: 170px;
-  padding: 10px;
-}
-
-.patner .img4 {
-  height: 90px;
-  width: 170px;
-}
-
+.patner .img1,
+.patner .img2,
+.patner .img3,
+.patner .img4,
 .patner .img5 {
   height: 80px;
-  width: 110px;
+  width: 190px;
+  padding: 10px;
+  margin: 10px;
+  object-fit: contain;
 }
 
 .patner img:hover {
-  box-shadow: 0 0 20px 0 #ffcc00
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-@media(max-width: 900px) {
+/* Styles for mobile */
+@media (max-width: 767px) {
   .patner h1 {
-    font-size: 30px
+    font-size: 26px;
   }
 
-  .row {
-    width: 100%;
-    border-radius: 0;
-    padding: 0;
-  }
-
-  .img1,
-  .img2,
-  .img3 {
-    height: 70px;
-    width: 140px;
-    padding: 10px;
-  }
-
-  .img4,
-  .img5 {
-    height: 70px;
-    width: 100px;
-    padding: 10px;
+  .patner .img1,
+  .patner .img2,
+  .patner .img3,
+  .patner .img4,
+  .patner .img5 {
+    height: 60px;
+    width: 130px;
   }
 }
+
 
 .footer {
   position: relative;
@@ -950,7 +973,7 @@ button:hover {
 .input-box input[type="button"]:hover {
   opacity: 1;
 }
-
+/* Styles for desktop */
 .footer .bottom-details {
   width: 100%;
   background-color: #fff;
@@ -962,30 +985,25 @@ button:hover {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.bottom-details .copyright_text,
-.bottom-details .copyright_text a {
-  font-size: 14px;
-  font-weight: 300;
-  color: #00008b;
-  opacity: 1;
-  text-decoration: none;
-}
-
-.bottom-details .copyright_text a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
-
-.bottom-details .copyright_text a {
-  margin-right: 10px;
-}
-
-.bottom-copyright .bottom-details .dev_text a {
-  text-decoration: none;
-  font-family: 'Rubik Wet Paint';
+.footer .bottom-details .dev_text a {
+  font-family: 'Rubik Wet Paint', sans-serif;
   color: #c01212;
+}
+
+/* Styles for mobile */
+@media (max-width: 767px) {
+  .footer .bottom-details .copyright_text {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer .bottom-details .dev_text {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1031,12 +1049,6 @@ button:hover {
 
   .footer .content .link-boxes .input-box {
     width: 60%;
-  }
-
-  .bottom-details .copyright_text,
-  .bottom-details .copyright_text a {
-    font-size: 12px;
-    display: flex;
   }
 }
 
