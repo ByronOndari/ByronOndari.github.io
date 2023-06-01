@@ -5,21 +5,25 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/*NavigationMenu*/
+/* NavigationMenu */
 .head-logo {
     display: flex;
     list-style: none;
 }
 
 nav img {
-    height: 58px;
-    width: 56px;
+    height: 3.25rem;
+    /* Changed from px to rem */
+    width: 3.125rem;
+    /* Changed from px to rem */
 }
 
 nav p {
-    margin: 20px 0px 0px 10px;
+    margin: 1.25rem 0 0.625rem 0.625rem;
+    /* Changed from px to rem */
     color: #fff;
-    font-size: 15px;
+    font-size: 0.9375rem;
+    /* Changed from px to rem */
 }
 
 nav {
@@ -28,7 +32,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 0 6.25rem;
+    /* Changed from px to rem */
     position: fixed;
     z-index: 100;
     background-color: #061e45;
@@ -53,12 +58,14 @@ nav ul li a {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    padding: 10px 10px;
-    font-size: 16px;
+    padding: 0.625rem 0.625rem;
+    font-size: 1rem;
+    /* Changed from px to rem */
     background: none;
     position: relative;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 1.25rem;
+    /* Changed from px to rem */
     /* Add this line to create spacing between items */
 }
 
@@ -70,7 +77,7 @@ nav ul li:first-child a {
 nav ul li a:hover {
     color: rgb(96, 210, 248);
     background: transparent;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 nav ul li a.active {
@@ -78,41 +85,56 @@ nav ul li a.active {
     opacity: 1;
 }
 
-/*HomePage*/
+/* HomePage */
 .Home-page {
-    height: 85vh;
+    height: 32rem;
     width: 100%;
     background-color: #061e45;
+    background-image: linear-gradient(#061e45eb, rgba(6, 30, 69, 0.75)), url(images/teamphoto.jpg);
+    background-size: cover;
+}
+
+/* HomePage Background Mobile Styles */
+@media (max-width: 767px) {
+    .background {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .text-box {
     margin-top: 0;
     justify-content: center;
     justify-items: center;
-    align-items: center
+    align-items: center;
 }
 
 .text-box h1 {
-    font-size: 58px;
-    padding-top: 200px;
+    font-size: 3.625rem;
+    /* Changed from px to rem */
+    padding-top: 11.875rem;
+    /* Changed from px to rem */
     margin-bottom: 1%;
     color: #43c7fc;
     text-align: center;
 }
 
 .text-box p {
-    font-size: 20px;
+    font-size: 1.25rem;
+    /* Changed from px to rem */
     color: #fff;
-    text-align: left;
-    padding: 1px 0 1px 110px;
+    text-align: center;
+    padding: 0.0625rem 0 0.0625rem 0rem;
+    /* Changed from px to rem */
 }
 
-/*BUTTON*/
+/* BUTTON */
 .button1 {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     cursor: pointer;
-    margin: 32px 0 5px 100px;
+    margin: 2.5rem 0 0.3125rem 0rem;
+    /* Changed from px to rem */
 }
 
 button {
@@ -120,27 +142,30 @@ button {
     position: relative;
     color: #fff;
     padding: 1.2em 1.5em;
-    font-size: 15px;
+    font-size: 0.9375rem;
+    /* Changed from px to rem */
     background: #061e45;
-    border: 3px solid #43c7fc;
-    transition: all .3s;
-    border-radius: 20px;
+    border: 0.1875rem solid #43c7fc;
+    /* Changed from px to rem */
+    transition: all 0.3s;
+    border-radius: 1.25rem;
+    /* Changed from px to rem */
 }
 
 button a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 button:hover {
     color: #43c7fc;
 }
 
-/*Vision & Mision*/
+/* Vision & Mission */
 .vision-mision {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 3.125rem;
     background-color: #43c7fc;
 }
 
@@ -148,107 +173,113 @@ button:hover {
 .mission {
     flex: 1;
     color: #061e45;
-    padding: 30px;
+    padding: 1.875rem;
+    max-width: 50%;
+    /* Set a maximum width of 50% for both divs */
 }
 
 .vision h1,
 .mission h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
     color: #fff;
-    text-align: left;
-}
-
-.vision {
-    padding-top: 1px;
+    text-align: center;
 }
 
 .vision p,
 .mission p {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
 }
 
 /* Optional: Add styling for vertical line */
 .vertical-line {
     display: inline-block;
-    width: 2px;
-    height: 230px;
+    width: 0.125rem;
+    height: 13.375rem;
     background-color: #061e45;
-    margin: 0 20px;
+    margin: 0 1.25rem;
 }
 
-/*DRIVE-BY*/
+/* Center the vertical line */
+.vision-mision .vertical-line {
+    align-self: center;
+}
+
+/* Drive-By */
 .drive {
     background-color: #f7f7f7;
-    padding: 50px 0;
+    padding: 3.125rem 0;
 }
 
 .drive h1 {
     color: #061e45;
-    font-size: 32px;
+    font-size: 2rem;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .row {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    /* Make columns stretch to the same height */
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .column {
     flex-basis: 30%;
-    /* Adjust the value to set the desired width for each column */
-    padding: 30px;
+    padding: 1.875rem;
     background-color: #061e45;
     color: #fff;
-    margin: 10px;
+    margin: 0.625rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1.25rem;
     transition: background-color 0.3s ease;
 }
 
 .column:hover {
     background-color: #061e45;
-    opacity: .9;
-    transition: .3s;
+    opacity: 0.9;
+    transition: 0.3s;
 }
 
 .column h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-top: 0;
     color: #43c7fc;
 }
 
 .column p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     color: #fff;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 /* Our Approach */
 .Approach {
     background-color: #061e45;
-    padding: 50px 0;
+    padding: 3.125rem 0;
+    /* Changed from px to rem */
     color: #fff;
     text-align: center;
 }
 
 .Approach h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    /* Changed from px to rem */
+    margin-bottom: 1.25rem;
+    /* Changed from px to rem */
 }
 
 .Approach p {
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* Changed from px to rem */
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    /* Changed from px to rem */
 }
 
 .cards {
@@ -259,9 +290,12 @@ button:hover {
 
 .card {
     flex-basis: 30%;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
+    padding: 1.25rem;
+    /* Changed from px to rem */
+    margin: 0.625rem;
+    /* Changed from px to rem */
+    border-radius: 1.25rem;
+    /* Changed from px to rem */
     background-color: #061e45;
     color: #fff;
     text-align: center;
@@ -269,60 +303,77 @@ button:hover {
 }
 
 .card h3 {
-    font-size: 24px;
+    font-size: 1.05em;
+    /* Changed from px to rem */
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    /* Changed from px to rem */
 }
 
 .card img {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 10px;
+    width: 4rem;
+    /* Changed from px to rem */
+    height: 4rem;
+    /* Changed from px to rem */
+    margin-bottom: 0.625rem;
+    /* Changed from px to rem */
 }
 
 .card p {
-    font-size: 16px;
+    font-size: .9rem;
+    /* Changed from px to rem */
     line-height: 1.5;
     margin-top: 0;
+    text-align: left;
 }
 
-/*Our Solution*/
 
+/*Our Solution*/
 .Solution {
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: #43c7fc;
+    padding: 1.25rem;
+    /* Changed from px to rem */
     text-align: center;
 }
 
 .Solution h2 {
-    font-size: 34px;
+    font-size: 2rem;
+    /* Changed from px to rem */
     color: #061e45;
 }
 
 .Solution p {
-    font-style: 18px;
+    font-size: 1rem;
+    /* Changed from px to rem */
     color: #061e45;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    /* Changed from px to rem */
 }
 
 .sol-section {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
+    margin: 1rem 0 1.5rem 0;
+    /* Changed from px to rem */
 }
 
 .sol-card {
     position: relative;
-    width: 360px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
+    width: 22.5rem;
+    /* Changed from px to rem */
+    padding: 1.25rem;
+    /* Changed from px to rem */
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+    /* Changed from px to rem */
     transition: transform 0.1s ease;
     overflow: hidden;
 }
 
 .sol-card:hover {
-    transform: translateY(0px);
+    transform: translateY(0);
 }
 
 .sol-card::before {
@@ -362,30 +413,29 @@ button:hover {
     opacity: 1;
 }
 
-.sol-card-overlay h1 {
-    font-weight: bold;
-    margin-bottom: 10px;
+.sol-card-overlay p {
     color: #fff;
-    font-size: 30px;
+    padding: 2.75em;
+    font-size: 0.875rem;
+    /* Changed from px to rem */
+    z-index: 1;
+    text-align: center;
 }
 
 .sol-card img {
     width: 100%;
-    height: 200px;
+    height: 12.5rem;
+    /* Changed from px to rem */
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 0.375rem;
+    /* Changed from px to rem */
 }
 
 .sol-card h4 {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #061e45;
-    z-index: 1;
-}
-
-.sol-card p {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: .5rem;
+    /* Changed from px to rem */
+    font-size: 1.25rem;
+    /* Changed from px to rem */
     color: #061e45;
     z-index: 1;
 }
@@ -393,23 +443,29 @@ button:hover {
 /* Our Impact */
 .impact-section h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 2.75rem;
+    /* Changed from px to rem */
     color: #061e45;
+    padding: .25em;
 }
 
 .Impact {
     width: 90vw;
     margin-top: 1%;
+    /* Changed from px to % */
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    /* Changed from px to rem */
     background-color: #061e45;
     color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1.75rem;
+    /* Changed from px to rem */
+    border-radius: 0.625rem;
+    /* Changed from px to rem */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -419,7 +475,8 @@ button:hover {
 
 .section-content {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 1.25rem;
+    /* Changed from px to rem */
 }
 
 .section-counter {
@@ -429,14 +486,14 @@ button:hover {
 
 #counter1,
 #counter2 {
-    font-size: 60px;
-    font-weight: bold;
-    color: #07a455;
+    font-size: 4rem;
+    /* Changed from px to rem */
+    color: #09b961;
 }
 
 #target1,
 #target2 {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 /*PATNER*/
@@ -444,29 +501,38 @@ button:hover {
 /* Styles for desktop */
 .patner {
     width: 90%;
+    /* Changed from px to % */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
+    /* Changed from px to % */
     padding-top: 0;
     padding-bottom: 1%;
+    /* Changed from px to % */
     background: #fff;
     margin-bottom: 5%;
-    border-radius: 10px;
+    /* Changed from px to % */
+    border-radius: 1rem;
+    /* Changed from px to rem */
 }
 
 .patner h1 {
-    font-size: 32px;
+    font-size: 2rem;
+    /* Changed from px to rem */
     color: #061e45;
-    margin-top: 20px;
+    margin-top: 1.25rem;
+    /* Changed from px to rem */
 }
 
 .patner hr {
     border: none;
     height: 1px;
     background-color: #ccc;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    /* Changed from px to rem */
+    margin-bottom: 1.25rem;
+    /* Changed from px to rem */
 }
 
 .patner .row2 {
@@ -474,7 +540,8 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
+    /* Changed from px to rem */
 }
 
 .patner .img1,
@@ -482,21 +549,27 @@ button:hover {
 .patner .img3,
 .patner .img4,
 .patner .img5 {
-    height: 80px;
-    width: 190px;
-    padding: 10px;
-    margin: 10px;
+    height: 5rem;
+    /* Changed from px to rem */
+    width: 12.5rem;
+    /* Changed from px to rem */
+    padding: 0.625rem;
+    /* Changed from px to rem */
+    margin: 0.625rem;
+    /* Changed from px to rem */
     object-fit: contain;
 }
 
 .patner img:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+    /* Changed from px to rem */
 }
 
 /* Styles for mobile */
 @media (max-width: 767px) {
     .patner h1 {
-        font-size: 26px;
+        font-size: 1.625rem;
+        /* Changed from px to rem */
     }
 
     .patner .img1,
@@ -504,8 +577,10 @@ button:hover {
     .patner .img3,
     .patner .img4,
     .patner .img5 {
-        height: 60px;
-        width: 130px;
+        height: 3.75rem;
+        /* Changed from px to rem */
+        width: 8.125rem;
+        /* Changed from px to rem */
     }
 }
 
@@ -523,7 +598,7 @@ button:hover {
     content: '';
     position: absolute;
     left: 0;
-    top: 210px;
+    top: 13.125rem;
     height: 1px;
     width: 100%;
     background: #fff;
@@ -531,10 +606,11 @@ button:hover {
 
 .footer .content {
     background-color: #061e45;
-    max-width: 1250px;
+    max-width: 78.125rem;
+    /* Changed from px to rem */
     margin: auto;
-    padding: 30px 40px 10px 40px;
-
+    padding: 1.875rem 2.5rem 0.625rem 2.5rem;
+    /* Changed from px to rem */
 }
 
 .footer .content .top {
@@ -543,12 +619,15 @@ button:hover {
     text-align: center;
     justify-content: space-between;
     margin-top: 1%;
-    padding: 45px 0 0 0;
+    padding: 2.8125rem 0 0 0;
+    /* Changed from px to rem */
 }
 
 .content .top .logo-details img {
-    width: 56px;
-    height: 58px;
+    width: 3.5rem;
+    /* Changed from px to rem */
+    height: 3.625rem;
+    /* Changed from px to rem */
 }
 
 .media-icons {
@@ -560,18 +639,23 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    /* Changed from px to rem */
+    height: 3.125rem;
+    /* Changed from px to rem */
     border-radius: 50%;
-    border: 2px solid #fff;
-    margin: 0 0 0 6px;
+    border: 0.125rem solid #fff;
+    margin: 0 0 0 0.375rem;
+    /* Changed from px to rem */
     background-color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .media-icons svg {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    /* Changed from px to rem */
+    height: 1.5625rem;
+    /* Changed from px to rem */
     fill: #061e45;
 }
 
@@ -582,14 +666,16 @@ button:hover {
 }
 
 .footer .content .link-boxes .box2 {
-    width: calc(100% / .5 - 10px);
+    width: calc(100% / 0.5 - 0.625rem);
 }
 
 .content .link-boxes .box2 .link_name {
     color: #43c7fc;
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* Changed from px to rem */
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    /* Changed from px to rem */
     position: relative;
 }
 
@@ -597,20 +683,24 @@ button:hover {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -0.125rem;
+    /* Changed from px to rem */
     height: 1px;
-    width: 50px;
+    width: 3.125rem;
+    /* Changed from px to rem */
     background: #fff;
 }
 
 .content .link-boxes .box2 li {
-    margin: 6px 0;
+    margin: 0.375rem 0;
+    /* Changed from px to rem */
     list-style: none;
 }
 
 .content .link-boxes .box2 li a {
     color: #fff;
-    font-size: 14px;
+    font-size: 0.875rem;
+    /* Changed from px to rem */
     font-weight: 400;
     text-decoration: none;
     opacity: 0.8;
@@ -623,34 +713,44 @@ button:hover {
 }
 
 .content .link-boxes .input-box {
-    margin-right: 55px;
+    margin-right: 3.4375rem;
+    /* Changed from px to rem */
 }
 
 .link-boxes .input-box input {
-    height: 40px;
-    width: calc(100% + 55px);
+    height: 2.5rem;
+    /* Changed from px to rem */
+    width: calc(100% + 3.4375rem);
+    /* Changed from px to rem */
     outline: none;
-    border: 2px solid #afafb6;
+    border: 0.125rem solid #afafb6;
     background: #061e45;
-    border-radius: 4px;
-    padding: 0 15px;
-    font-size: 15px;
+    border-radius: 0.25rem;
+    /* Changed from px to rem */
+    padding: 0 0.9375rem;
+    /* Changed from px to rem */
+    font-size: 0.9375rem;
+    /* Changed from px to rem */
     color: #fff;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
+    /* Changed from px to rem */
 }
 
 .link-boxes .input-box input::placeholder {
     color: #afafb6;
-    font-size: 16px
+    font-size: 1rem;
+    /* Changed from px to rem */
 }
 
 .link-boxes .input-box input[type="button"] {
     background-color: #fff;
     color: #061e45;
     border: none;
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* Changed from px to rem */
     font-weight: 500;
-    margin: 4px 0;
+    margin: 0.25rem 0;
+    /* Changed from px to rem */
     opacity: 0.8;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -668,9 +768,11 @@ button:hover {
 }
 
 .footer .bottom-details .copyright_text {
-    max-width: 1250px;
+    max-width: 78.125rem;
+    /* Changed from px to rem */
     margin: auto;
-    padding: 8px 40px;
+    padding: 0.5rem 2.5rem;
+    /* Changed from px to rem */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -685,11 +787,13 @@ button:hover {
     .footer .bottom-details .copyright_text {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        padding: 1.25rem;
+        /* Changed from px to rem */
     }
 
     .footer .bottom-details .dev_text {
-        margin-top: 10px;
+        margin-top: 0.625rem;
+        /* Changed from px to rem */
     }
 }
 
@@ -700,7 +804,8 @@ button:hover {
 
     .footer .content .link-boxes .input-box {
         width: 40%;
-        margin-top: 10px;
+        margin-top: 0.625rem;
+        /* Changed from px to rem */
     }
 
     .logo-name {
@@ -720,18 +825,23 @@ button:hover {
     }
 
     .content .top .logo-details {
-        font-size: 26px;
+        font-size: 1.625rem;
+        /* Changed from px to rem */
     }
 
     .content .top .media-icons a {
-        height: 35px;
-        width: 35px;
-        font-size: 14px;
-        line-height: 35px;
+        height: 2.1875rem;
+        /* Changed from px to rem */
+        width: 2.1875rem;
+        /* Changed from px to rem */
+        font-size: 0.875rem;
+        /* Changed from px to rem */
+        line-height: 2.1875rem;
+        /* Changed from px to rem */
     }
 
     .footer .content .link-boxes .box2 {
-        width: calc(100% /.5 - 10px);
+        width: calc(100% / 0.5 - 0.625rem);
     }
 
     .footer .content .link-boxes .input-box {
@@ -741,7 +851,8 @@ button:hover {
 
 @media (max-width: 520px) {
     .footer::before {
-        top: 145px;
+        top: 9.0625rem;
+        /* Changed from px to rem */
     }
 
     .footer .content .top {
@@ -749,11 +860,12 @@ button:hover {
     }
 
     .content .top .media-icons {
-        margin-top: 16px;
+        margin-top: 1rem;
+        /* Changed from px to rem */
     }
 
     .footer .content .link-boxes .box2 {
-        width: calc(100% /.5 - 10px);
+        width: calc(100% / 0.5 - 0.625rem);
     }
 
     .footer .content .link-boxes .input-box {
