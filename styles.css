@@ -19,10 +19,10 @@ nav img {
 }
 
 nav p {
-    margin: 1.25rem 0 0.625rem 0.625rem;
+    margin: 0.25rem 0 0.625rem 0.625rem;
     /* Changed from px to rem */
-    color: #fff;
-    font-size: 0.9375rem;
+    color: #afafb6;
+    font-size: 0.8rem;
     /* Changed from px to rem */
 }
 
@@ -87,10 +87,10 @@ nav ul li a.active {
 
 /* HomePage */
 .Home-page {
-    height: 32rem;
+    height: 35rem;
     width: 100%;
     background-color: #061e45;
-    background-image: linear-gradient(#061e45eb, rgba(6, 30, 69, 0.75)), url(images/teamphoto.jpg);
+    background-image: linear-gradient(#061e45eb, rgba(6, 30, 69, 0.85)), url(images/teamphoto.jpg);
     background-size: cover;
 }
 
@@ -165,7 +165,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3.125rem;
+    padding: 1.125rem 0 2.75rem 0;
     background-color: #43c7fc;
 }
 
@@ -173,8 +173,8 @@ button:hover {
 .mission {
     flex: 1;
     color: #061e45;
-    padding: 1.875rem;
-    max-width: 50%;
+    padding: 0.75rem;
+    max-width: 55%;
     /* Set a maximum width of 50% for both divs */
 }
 
@@ -188,9 +188,13 @@ button:hover {
 
 .vision p,
 .mission p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 /* Optional: Add styling for vertical line */
@@ -324,7 +328,7 @@ button:hover {
     /* Changed from px to rem */
     line-height: 1.5;
     margin-top: 0;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -364,7 +368,7 @@ button:hover {
     /* Changed from px to rem */
     padding: 1.25rem;
     /* Changed from px to rem */
-    background-color: #fff;
+    background-color: #061e45;
     box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
     border-radius: 0.375rem;
     /* Changed from px to rem */
@@ -436,41 +440,42 @@ button:hover {
     /* Changed from px to rem */
     font-size: 1.25rem;
     /* Changed from px to rem */
-    color: #061e45;
+    color: #43c7fc;
     z-index: 1;
 }
 
 /* Our Impact */
 .impact-section h2 {
     text-align: center;
-    font-size: 2.75rem;
+    font-size: 2rem;
     /* Changed from px to rem */
     color: #061e45;
+    background-color: #fff;
     padding: .25em;
 }
 
 .Impact {
-    width: 90vw;
-    margin-top: 1%;
+    width: 100%;
+    margin-top: 0%;
     /* Changed from px to % */
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     display: flex;
     align-items: center;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0rem;
     /* Changed from px to rem */
-    background-color: #061e45;
+    background-color: #fff;
     color: #fff;
     padding: 1.75rem;
     /* Changed from px to rem */
-    border-radius: 0.625rem;
+    border-radius: 0rem;
     /* Changed from px to rem */
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .Impact p {
     text-align: center;
+    color: #061e45
 }
 
 .section-content {
@@ -500,20 +505,20 @@ button:hover {
 /* Styles for partners section */
 /* Styles for desktop */
 .patner {
-    width: 90%;
+    width: 100%;
     /* Changed from px to % */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 0%;
     /* Changed from px to % */
     padding-top: 0;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
     /* Changed from px to % */
     background: #fff;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     /* Changed from px to % */
-    border-radius: 1rem;
+    border-radius: 0rem;
     /* Changed from px to rem */
 }
 
@@ -523,13 +528,15 @@ button:hover {
     color: #061e45;
     margin-top: 1.25rem;
     /* Changed from px to rem */
+    padding: 0.75rem 0 0 0;
 }
 
-.patner hr {
+.patner hr,
+.impact-section hr {
     border: none;
-    height: 1px;
-    background-color: #ccc;
-    margin-top: 1.25rem;
+    height: .5px;
+    background-color: #061e45;
+    margin-top: 0.25rem;
     /* Changed from px to rem */
     margin-bottom: 1.25rem;
     /* Changed from px to rem */
@@ -540,8 +547,6 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 1.25rem;
-    /* Changed from px to rem */
 }
 
 .patner .img1,
@@ -549,21 +554,18 @@ button:hover {
 .patner .img3,
 .patner .img4,
 .patner .img5 {
-    height: 5rem;
+    height: 5.75rem;
     /* Changed from px to rem */
-    width: 12.5rem;
+    width: 13.0rem;
     /* Changed from px to rem */
-    padding: 0.625rem;
+    padding: .75rem;
     /* Changed from px to rem */
     margin: 0.625rem;
     /* Changed from px to rem */
     object-fit: contain;
+    background-color: #fff;
 }
 
-.patner img:hover {
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
-    /* Changed from px to rem */
-}
 
 /* Styles for mobile */
 @media (max-width: 767px) {
