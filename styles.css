@@ -359,7 +359,7 @@ button:hover {
 /* Our Approach */
 .Approach {
     background-color: #061e45;
-    padding: 3.125rem 0;
+    padding: 3.125rem 0 0.125rem 0;
     /* Changed from px to rem */
     color: #fff;
     text-align: center;
@@ -401,10 +401,10 @@ button:hover {
 }
 
 .card h3 {
-    font-size: 1.05em;
+    font-size: 1.5em;
     /* Changed from px to rem */
     margin-top: 0;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.325rem;
     /* Changed from px to rem */
 }
 
@@ -489,7 +489,7 @@ button:hover {
     position: relative;
     width: 22.5rem;
     /* Changed from px to rem */
-    height: 21.5rem;
+    height: 18rem;
     padding: 1.75rem;
     /* Changed from px to rem */
     background-color: #061e45;
@@ -552,7 +552,7 @@ button:hover {
 
 .sol-card img {
     width: 100%;
-    height: 14.5rem;
+    height: 12.5rem;
     /* Changed from px to rem */
     object-fit: cover;
     border-radius: 0.375rem;
@@ -741,7 +741,7 @@ button:hover {
 .patner .img5 {
     height: 6.75rem;
     /* Changed from px to rem */
-    width: 14.0rem;
+    width: 10.0rem;
     /* Changed from px to rem */
     padding: 0.75rem;
     /* Changed from px to rem */
