@@ -6,25 +6,6 @@
 }
 
 /* NavigationMenu */
-.head-logo {
-  display: flex;
-  list-style: none;
-}
-
-nav img {
-  height: 3.25rem;
-  /* Changed from px to rem */
-  width: 3.125rem;
-  /* Changed from px to rem */
-}
-
-nav p {
-  margin: 0.3rem 0 0.25rem 0.625rem;
-  /* Changed from px to rem */
-  color: #0b76a0;
-  font-size: 0.95rem;
-  /* Changed from px to rem */
-}
 
 nav {
   width: 100vw;
@@ -33,11 +14,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 6.25rem;
-  /* Changed from px to rem */
   position: fixed;
   z-index: 100;
   background-color: #061e45;
-  /*#293065*/
   transition: top 0.3s;
 }
 
@@ -58,15 +37,13 @@ nav ul li a {
   display: inline-block;
   text-decoration: none;
   color: #0b76a0;
+  /*#888*/
   padding: 0.625rem 0.625rem;
   font-size: 1rem;
-  /* Changed from px to rem */
   background: none;
   position: relative;
   cursor: pointer;
   margin-left: 1.25rem;
-  /* Changed from px to rem */
-  /* Add this line to create spacing between items */
 }
 
 nav ul li:first-child a {
@@ -75,14 +52,115 @@ nav ul li:first-child a {
 }
 
 nav ul li a:hover {
-  color: rgb(96, 210, 248);
+  color: #c01212;
   background: transparent;
   transition: 0.2s;
 }
 
+.head-logo {
+  display: flex;
+  list-style: none;
+}
+
+nav img {
+  height: 3.25rem;
+  width: 3.125rem;
+}
+
+nav p {
+  margin: 0.3rem 0 0.25rem 0.625rem;
+  color: #0b76a0;
+  font-size: 0.95rem;
+}
+
 nav ul li a.active {
-  color: #bcbcbcbe;
+  color: #888;
   opacity: 1;
+}
+
+nav ul li a.active:hover {
+  color: #c01212;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: left;
+  line-height: 80px;
+  margin-right: 2px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 1020px) {
+  nav {
+      padding: 0 20px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      top: 7.5rem;
+      left: -110%;
+      width: 100vw;
+      height: 60vh;
+      background-color: #061e45;
+      text-align: center;
+      transition: all .5s;
+      z-index: 99;
+  }
+
+  nav ul li {
+      margin: 0 auto;
+      line-height: 1px;
+  }
+
+  nav ul li a {
+      margin: 0 auto;
+      font-size: 1.75rem;
+      display: block;
+      padding: 2rem;
+      color: #0b76a0;
+      text-align: center;
+  }
+
+  .nav-menu.active {
+      left: 0%;
+      margin: 0 auto;
+  }
+
+  .close-btn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      font-size: 30px;
+      color: #fff;
+      text-decoration: none;
+  }
+
+  #check:checked~nav ul {
+      left: 0;
+  }
+
+  .checkbtn {
+      display: block;
+  }
+
+  .checkbtn:before {
+      content: "\2715";
+      font-size: 24px;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      display: none;
+  }
 }
 
 /* Board of trustees */
@@ -93,9 +171,11 @@ nav ul li a.active {
 }
 
 .profiles h2 {
-  padding-top: 10%;
-  font-size: 36px;
-  margin-bottom: 3px;
+  padding-top: 2.5em;
+  /* 10% / 16px = 0.625em */
+  font-size: 2.25rem;
+  /* 36px / 16px = 2.25rem */
+  margin-bottom: 0.1875rem;
   color: #fff;
 }
 
@@ -103,51 +183,80 @@ nav ul li a.active {
   color: #888;
   max-width: 80vw;
   text-align: center;
-  margin: 0 auto 20px auto; /* Add margin auto to horizontally center the paragraph */
+  margin: 0 auto 1.25rem auto;
 }
+
 
 .profile {
   display: inline-block;
   width: 30%;
-  height: 400px;
-  margin: 20px;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  padding: 20px;
+  height: 30rem;
+  margin: 1.25rem;
+  border: 0.125rem solid #ffffff;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
   text-align: center;
   vertical-align: top;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  /* 10px / 16px = 0.625rem */
   overflow: hidden;
 }
 
 .profile img {
   display: block;
   width: 32%;
-  height: 100px;
+  height: 6.25rem;
   margin: 0 auto;
   border-radius: 5%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .profile h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   color: #fff;
 }
 
 .profile h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #888;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
+
 
 .profile p {
   color: #fff;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-top: 20px;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  margin-top: 1.25em;
+  text-align: justify;
+}
+
+/* Responsive styles for tablet and mobile devices */
+@media screen and (max-width: 768px) {
+  .profiles h2 {
+    padding-top: 3.5em;
+  }
+
+  .profiles p{
+    font-size: 0.9rem;
+  }
+
+  .profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .profile {
+    width: 100%;
+    height: auto;
+    margin: 1.25rem 0;
+    padding: 1.5rem;
+  }
 }
 
 /*FOOTER SECTION*/
@@ -169,7 +278,7 @@ nav ul li a.active {
   top: 13.125rem;
   height: 1px;
   width: 100%;
-  background: #fff;
+  background: #888;
 }
 
 .footer .content {
@@ -353,90 +462,98 @@ nav ul li a.active {
 /* Styles for mobile */
 @media (max-width: 767px) {
   .footer .bottom-details .copyright_text {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.25rem;
-      /* Changed from px to rem */
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+    /* Changed from px to rem */
   }
 
   .footer .bottom-details .dev_text {
-      margin-top: 0.625rem;
-      /* Changed from px to rem */
+    margin-top: 0.625rem;
+    /* Changed from px to rem */
+  }
+
+  .footer::before {
+    display: none;
   }
 }
 
 @media (max-width: 900px) {
   .footer .content .link-boxes {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .footer .content .link-boxes .input-box {
-      width: 40%;
-      margin-top: 0.625rem;
-      /* Changed from px to rem */
+    width: 40%;
+    margin-top: 0.625rem;
+    /* Changed from px to rem */
+  }
+
+  .footer::before {
+    display: none;
   }
 
   .logo-name {
-      display: none;
+    display: none;
   }
 }
 
 @media (max-width: 1240px) {
   .logo-name {
-      display: none;
+    display: none;
   }
 }
 
 @media (max-width: 700px) {
   .footer {
-      position: relative;
+    position: relative;
   }
 
   .content .top .logo-details {
-      font-size: 1.625rem;
-      /* Changed from px to rem */
+    font-size: 1.625rem;
+    /* Changed from px to rem */
   }
 
   .content .top .media-icons a {
-      height: 2.1875rem;
-      /* Changed from px to rem */
-      width: 2.1875rem;
-      /* Changed from px to rem */
-      font-size: 0.875rem;
-      /* Changed from px to rem */
-      line-height: 2.1875rem;
-      /* Changed from px to rem */
+    height: 2.1875rem;
+    /* Changed from px to rem */
+    width: 2.1875rem;
+    /* Changed from px to rem */
+    font-size: 0.875rem;
+    /* Changed from px to rem */
+    line-height: 2.1875rem;
+    /* Changed from px to rem */
   }
 
   .footer .content .link-boxes .box2 {
-      width: calc(100% / 0.5 - 0.625rem);
+    width: calc(100% / 0.5 - 0.625rem);
   }
 
   .footer .content .link-boxes .input-box {
-      width: 60%;
+    width: 60%;
   }
 }
 
 @media (max-width: 520px) {
   .footer::before {
-      top: 9.0625rem;
-      /* Changed from px to rem */
+    top: 9.0625rem;
+    /* Changed from px to rem */
   }
 
   .footer .content .top {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .content .top .media-icons {
-      margin-top: 1rem;
-      /* Changed from px to rem */
+    margin-top: 1rem;
+    /* Changed from px to rem */
   }
 
   .footer .content .link-boxes .box2 {
-      width: calc(100% / 0.5 - 0.625rem);
+    width: calc(100% / 0.5 - 0.625rem);
   }
 
   .footer .content .link-boxes .input-box {
-      width: 100%;
+    width: 100%;
   }
 }

@@ -2,86 +2,149 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>BHKi - Think It, Code It!!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/Bioinformatica_Hub_Logo.png">
+    <script src="https://kit.fontawesome.com/7b668c6785.js" crossorigin="anonymous"></script>
+    <title>BHKi - Leadership</title>
     <link rel="stylesheet" href="stylesabout.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fontawesome.com/v4/icons/">
-    <link rel="canonical" href="https://fontawesome.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus Jakarta Sans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat Alternates">
-    <script src="https://kit.fontawesome.com/7b668c6785.js"></script>
 </head>
 
 <body>
     <!--Navigation bar-->
-    <nav>
-        <div class="head-logo"><a href="index.html">
-                <img src="images/Bioinformatica_Hub_Logo.png" alt="Logo"></a>
-            <p>BHKi<br>Think It, Code It!!!
-            <p>
+    <nav id="navbar">
+        <div class="head-logo">
+            <a href="index.html">
+                <img src="images/Bioinformatica_Hub_Logo.png" alt="Logo">
+            </a>
+            <p>BHKi<br>Think It, Code It!!!</p>
         </div>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="projects.html">Activities</a></li>
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
                     target="_blank">Join</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="about.html" class="active">About</a></li>
             <li><a href="donate.html">DONATE</a></li>
         </ul>
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars fa-fade"></i>
+        </label>
+        <input type="checkbox" id="check">
     </nav>
 
+    <script>
+        const checkBtn = document.getElementById('check');
+        const navMenu = document.querySelector('.nav-menu');
+        const checkBtnIcon = document.querySelector('.checkbtn i');
+
+        checkBtn.addEventListener('click', function () {
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                checkBtnIcon.classList.remove('fa-times');
+                checkBtnIcon.classList.add('fa-bars');
+            } else {
+                navMenu.classList.add('active');
+                checkBtnIcon.classList.remove('fa-bars');
+                checkBtnIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                navbar.style.top = "-100px"; // Adjust this value as needed
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
 
     <!---Steering Committee---->
 
     <section class="profiles">
         <h2>Leadership</h2>
-        <p>Our team comprises of Bioinformaticians speacializing in different fields of the field but with a common enthusiasm for capacity building and community development. We believe in community as a way to propagate bioinformatics research and education to build more region specific solutions.</h2>
+        <p>Our team comprises of Bioinformaticians speacializing in different fields of the field but with a common
+            enthusiasm for capacity building and community development. We believe in community as a way to propagate
+            bioinformatics research and education to build more region specific solutions.</h2>
         <div class="profile">
             <img src="images/Festus-Nyasimi.jpg" alt="Profile Picture">
             <h3>Festus Nyasimi</h3>
             <h4>Chairperson BHKi</h4>
-            <p>Festus is a Bioinformatician and a Data Scientist using statistical tools and computational methods to understand the genetics of complex diseases and traits. He is also the co-founder of Bioinformatics Hub of Kenya (BHKi), an organization which aims at up-skilling and empowering students and researchers with bioinformatics skills. He has formal training in Bioinformatics, Health Research methods, Microbiology and Biotechnology. Festus is actively engaged in training and community outreach events in the region, he has previously been involved as a trainer in Africa Advance Bionformatics Network (AABN), he was a mentor in the second cohort of HackBio Internship, and he is actively engaged in Open Life Science (OLS). Prior to his current role Festus has conducted research work at ICIPE and KWTRP. His hobbies include traveling and adventure.</p>
+            <p>Festus is a Bioinformatician and a Data Scientist using statistical tools and computational
+                methods to understand the genetics of complex diseases and traits. He is a cofounder of BHKi.
+                With formal training in Bioinformatics, Health Research methods, Microbiology, and
+                Biotechnology, Festus actively participates in training sessions and community outreach
+                initiatives in the region. He has previously served as a trainer for the Africa Advance
+                Bioinformatics Network (AABN), mentored the second cohort of HackBio Internship, and
+                remains actively involved in the Open Life Science (OLS) community. Festus has also
+                contributed to noteworthy research projects at esteemed institutions like ICIPE and KWTRP.
+                Outside of work, he finds joy in traveling and seeking out adventurous experiences.</p>
         </div>
         <div class="profile">
             <img src="images/Pauline-Karega.jpg" alt="Profile Picture">
             <h3>Karega Pauline</h3>
             <h4>Vice Chairperson</h4>
-            <p>Pauline Karega is a bioinformatics student and researcher with experience in evolutionary biology. Her research interests are in health data and health information systems. She is a co-founder of the Bioinformatics Hub of Kenya initiative (BHKi) and enjoys working at a project management capacity in community initiatives. She is passionate about capacity building in bioinformatics and data science, and community outreach. 
+            <p>Pauline Karega is a bioinformatics student and researcher with experience i n evolutionary biology. Her
+                research interests are in health data and health information systems.
+                She is a co-founder of the Bioinformatics Hub of Kenya initiative (BHKi) and enjoys working at
+                a project management capacity in community initiatives. She is passionate about capacity
+                building in bioinformatics and data science, and community outreach.
                 Outside science Pauline enjoys performing arts such as musicals and dance festivals.
-                </p>
+            </p>
         </div>
         <div class="profile">
             <img src="images/Margaret-Wanjiru.jpg" alt="Profile Picture">
             <h3>Margaret Wanjiru</h3>
             <h4>Organizing Secretary</h4>
-            <p>Margaret serves the role of secretary to the BHKI steering committee. She is a bioinformatician with a keen interest in omics and big data analysis.</p>
+            <p>Margaret serves the role of secretary to the BHKI steering committee. She is a bioinformatician with a
+                keen interest in omics and big data analysis.</p>
         </div>
         <div class="profile">
             <img src="images/Michael-Landi.jpg" alt="Profile Picture">
             <h3>Michael Landi</h3>
             <h4>Organizing Lead</h4>
-            <p>Michael is a bioinformatics student with a keen interest in epigenetics and genomics, currently a PhD student at the Swedish University of Agricultural Sciences. A co-founder of Bioinformatics Hub of Kenya (BHKI). He is a certified Software Carpentries instructor, an Open Life Science (OLS) graduate and a mentor. He is passionate about capacity building. Hobbies: Triathlon!</p>
+            <p>Michael is a bioinformatics student with a keen interest in epigenetics and genomics, currently a
+                PhD student at the Swedish University of Agricultural Sciences. A co-founder of Bioinformatics
+                Hub of Kenya (BHKI). He is a certified Software Carpentries instructor, an Open Life Science
+                (OLS) graduate and a mentor. He is passionate about capacity building. Hobbies: Triathlon!</p>
         </div>
         <div class="profile">
             <img src="images/David.jpg" alt="Profile Picture">
             <h3>David Kiragu</h3>
             <h4>Finance lead</h4>
-            <p>David is a bioinformatics student with a keen interest in both genomic data production and using computational skill sets to answer research questions in the fields of zoonotic diseases and wildlife conservation. He is a BiXCop 2021 fellow and has a background in Bioinformatics, Molecular Biology and Microbiology. Due to this special interest in capacity development and community outreach, he is also a co-founder and trainer at Bioinformatics Hub of Kenya Initiative(BHKi) and African International Biotechnology and Biomedical Conference. His current affiliation is at the Institute of Primate Research(IPR), Kenya. Fun activities: Cycling and travelling.</p>
+            <p>David is a bioinformatics student with a keen interest in both genomic data production and using
+                computational skill sets to answer research questions in the fields of zoonotic diseases and
+                wildlife conservation. He is a BiXCop 2021 fellow and has a background in Bioinformatics,
+                Molecular Biology and Microbiology. Due to this special interest in capacity development and
+                community outreach, he is also a co-founder and trainer at Bioinformatics Hub of Kenya
+                Initiative(BHKi) and African International Biotechnology and Biomedical Conference(AIBBC).
+                His current affiliation is at the Institute of Primate Research(IPR) as a researcher, Kenya. Fun
+                activities: Cycling and travelling.</p>
         </div>
         <div class="profile">
             <img src="images/Laurah-Ondari.jpg" alt="Profile Picture">
             <h3>Laurah Ondari</h3>
             <h4>Communications Lead</h4>
-            <p>Laurah (she/her) is a science enthusiast, especially in the fields of bioinformatics, computer-aided drug design, and medical biochemistry. She has experience working with omics data and molecular docking and is keen on spearheading and contributing to projects that deal with finding cures for diseases through the application of bioinformatics techniques.
-                Currently, she has successfully defended her master's dissertation in MSc. Bioinformatics. She is also actively working on bridging the gap between experienced and novice bioinformaticians in Kenya through the Bioinformatics Hub of Kenya Initiative (BHKi) and bringing science stories to life through the Science In Real Life podcast (SIRL). During her free time, she volunteers in passion projects such as TEDxParklands :)
-                Her passion for drug discovery stems from wanting to see a disease-free world and this has led her to try and craft solutions wherever an opportunity arises such as through the JKUAT hatch-hack competition (where her team emerged third) and the Nairobi Perl hackathon (where her team emerged victorious). She is committed to quality education and scientific discovery and would like to be at the crux of this. If this aligns with you or if you would like to know anything further, please contact Laurah via LinkedIn.
-                </p>
+            <p>Nyasita (she/her) is a science enthusiast in the fields of bioinformatics, computer-aided drug
+                design, and medical biochemistry. Nyasita holds an MSc in Bioinformatics and with a strong
+                background in omics data analysis and in silico modeling, she is dedicated to leading and
+                contributing to projects focused on leveraging bioinformatics techniques to discover disease
+                cures.
+                She also hosts the Science In Real Life podcast (SIRL), where she brings science stories to life.
+                Additionally, Nyasita is part of the Open Life Science where she serves in the governance
+                committee and mentors others. In her spare time, she volunteers in community development and
+                capacity building efforts.
+            </p>
         </div>
     </section>
 
@@ -98,7 +161,8 @@
                 <ul class="box2">
                     <li class="link_name">Contribute</li>
                     <li><a href="donate.html">DONATE</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link" target="_blank">JOIN US</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
+                            target="_blank">JOIN US</a></li>
                 </ul>
                 <ul class="box2">
                     <li class="link_name">Email Us</li>

@@ -9,34 +9,74 @@
     <script src="https://kit.fontawesome.com/7b668c6785.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>BHKi - Think It, Code It!!!</title>
+    <script src="https://kit.fontawesome.com/7b668c6785.js"></script>
 </head>
 
 <body>
-    <!--Navigation bar-->
-    <nav>
-        <div class="head-logo"><a href="index.html">
-                <img src="images/Bioinformatica_Hub_Logo.png" alt="Logo"></a>
-            <p>BHKi<br>Think It, Code It!!!
-            <p>
+    <!-- Navigation bar -->
+    <nav id="navbar">
+        <div class="head-logo">
+            <a href="index.html">
+                <img src="images/Bioinformatica_Hub_Logo.png" alt="Logo">
+            </a>
+            <p>BHKi<br>Think It, Code It!!!</p>
         </div>
         <ul class="nav-menu">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="projects.html">Activities</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link" target="_blank">Join</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
+                    target="_blank">Join</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="donate.html">DONATE</a></li>
         </ul>
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars fa-fade"></i>
+        </label>
+        <input type="checkbox" id="check">
     </nav>
+
+    <script>
+        const checkBtn = document.getElementById('check');
+        const navMenu = document.querySelector('.nav-menu');
+        const checkBtnIcon = document.querySelector('.checkbtn i');
+
+        checkBtn.addEventListener('click', function () {
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                checkBtnIcon.classList.remove('fa-times');
+                checkBtnIcon.classList.add('fa-bars');
+            } else {
+                navMenu.classList.add('active');
+                checkBtnIcon.classList.remove('fa-bars');
+                checkBtnIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                navbar.style.top = "-100px"; // Adjust this value as needed
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
 
     <!--Home Page-->
     <section class="Home-page">
         <div class="text-box">
             <h1>Bioinformatics Hub of Kenya Initiative</h1>
             <P>BHKi bridges the gap between well established bioinformaticians and aspiring ones through peer training
-                <br>and mentorship so as to enhance collaborations to foster quality scientific research and
-                <br>innovations and promote the sharing of data, skills and codes.
+                and mentorship so as to enhance collaborations to foster quality scientific research and
+                innovations and promote the sharing of data, skills and codes.
             </P>
             <div class="button1">
                 <a href="#scroll-section"><button class="anim">Stay informed and connected!</button></a>
@@ -120,7 +160,7 @@
             <div class="sol-card" data-card-number="1">
                 <div class="sol-card-overlay">
                     <p><b>Ignite curiosity and foster connections through outreaches.</b> We bring bioinformatics to
-                        students and researchers, inspiring them to explore the fascinating world of computational 
+                        students and researchers, inspiring them to explore the fascinating world of computational
                         biology and data-driven discovery.</p>
                 </div>
                 <img src="images/outreaches.jpg" alt="outreaches">
@@ -128,7 +168,8 @@
             </div>
             <div class="sol-card" data-card-number="2">
                 <div class="sol-card-overlay">
-                    <p><b>Unleash creativity and problem-solving through workshops and hackathons.</b> We foster an environment
+                    <p><b>Unleash creativity and problem-solving through workshops and hackathons.</b> We foster an
+                        environment
                         of hands-on learning and collaboration, providing participants with the essential skills and
                         tools to tackle real-world challenges in bioinformatics.</p>
                 </div>
@@ -137,8 +178,9 @@
             </div>
             <div class="sol-card" data-card-number="3">
                 <div class="sol-card-overlay">
-                    <p><b>Networking and knowledge sharing through conferences.</b> Our seminars and conferences are a world of 
-                        knowledge and inspiration as experts from diverse fields come together to share groundbreaking 
+                    <p><b>Networking and knowledge sharing through conferences.</b> Our seminars and conferences are a
+                        world of
+                        knowledge and inspiration as experts from diverse fields come together to share groundbreaking
                         research and insights, fostering collaboration and pushing the boundaries of innovation</p>
                 </div>
                 <img src="images/seminars.JPG" alt="Seminars & Conferences">
@@ -209,7 +251,7 @@
     </section>
 
     <!--CARDS-->
-    
+
 
     <!--PARTNERS-->
     <section class="patner">
@@ -241,7 +283,8 @@
                 <ul class="box2">
                     <li class="link_name">Contribute</li>
                     <li><a href="donate.html">DONATE</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link" target="_blank">JOIN US</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
+                            target="_blank">JOIN US</a></li>
                 </ul>
                 <ul class="box2">
                     <li class="link_name">Email Us</li>

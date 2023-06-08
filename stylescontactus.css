@@ -6,40 +6,17 @@
 }
 
 /* NavigationMenu */
-.head-logo {
-  display: flex;
-  list-style: none;
-}
-
-nav img {
-  height: 3.25rem;
-  /* Changed from px to rem */
-  width: 3.125rem;
-  /* Changed from px to rem */
-}
-
-nav p {
-  margin: 0.3rem 0 0.25rem 0.625rem;
-  /* Changed from px to rem */
-  color: #0b76a0;
-  font-size: 0.95rem;
-  /* Changed from px to rem */
-}
 
 nav {
-  top: 0;
-  /* Set the navigation to the top of the screen */
   width: 100vw;
   height: 15vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 6.25rem;
-  /* Changed from px to rem */
   position: fixed;
   z-index: 100;
   background-color: #061e45;
-  /*#293065*/
   transition: top 0.3s;
 }
 
@@ -60,15 +37,13 @@ nav ul li a {
   display: inline-block;
   text-decoration: none;
   color: #0b76a0;
+  /*#888*/
   padding: 0.625rem 0.625rem;
   font-size: 1rem;
-  /* Changed from px to rem */
   background: none;
   position: relative;
   cursor: pointer;
   margin-left: 1.25rem;
-  /* Changed from px to rem */
-  /* Add this line to create spacing between items */
 }
 
 nav ul li:first-child a {
@@ -77,15 +52,117 @@ nav ul li:first-child a {
 }
 
 nav ul li a:hover {
-  color: rgb(96, 210, 248);
+  color: #c01212;
   background: transparent;
   transition: 0.2s;
 }
 
+.head-logo {
+  display: flex;
+  list-style: none;
+}
+
+nav img {
+  height: 3.25rem;
+  width: 3.125rem;
+}
+
+nav p {
+  margin: 0.3rem 0 0.25rem 0.625rem;
+  color: #0b76a0;
+  font-size: 0.95rem;
+}
+
 nav ul li a.active {
-  color: #bcbcbcbe;
+  color: #888;
   opacity: 1;
 }
+
+nav ul li a.active:hover {
+  color: #c01212;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: left;
+  line-height: 80px;
+  margin-right: 2px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 1020px) {
+  nav {
+      padding: 0 20px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      top: 7.5rem;
+      left: -110%;
+      width: 100vw;
+      height: 60vh;
+      background-color: #061e45;
+      text-align: center;
+      transition: all .5s;
+      z-index: 99;
+  }
+
+  nav ul li {
+      margin: 0 auto;
+      line-height: 1px;
+  }
+
+  nav ul li a {
+      margin: 0 auto;
+      font-size: 1.75rem;
+      display: block;
+      padding: 2rem;
+      color: #0b76a0;
+      text-align: center;
+  }
+
+  .nav-menu.active {
+      left: 0%;
+      margin: 0 auto;
+  }
+
+  .close-btn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      font-size: 30px;
+      color: #fff;
+      text-decoration: none;
+  }
+
+  #check:checked~nav ul {
+      left: 0;
+  }
+
+  .checkbtn {
+      display: block;
+  }
+
+  .checkbtn:before {
+      content: "\2715";
+      font-size: 24px;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      display: none;
+  }
+}
+
 
 /*CONTACT SECTION*/
 .contact-section {
@@ -372,6 +449,10 @@ textarea {
     margin-top: 0.625rem;
     /* Changed from px to rem */
   }
+
+  .footer::before {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -383,6 +464,10 @@ textarea {
     width: 40%;
     margin-top: 0.625rem;
     /* Changed from px to rem */
+  }
+  
+  .footer::before {
+    display: none;
   }
 
   .logo-name {

@@ -13,22 +13,61 @@
 
 <body>
     <!--Navigation bar-->
-    <nav>
-        <div class="head-logo"><a href="index.html">
-                <img src="images/Bioinformatica_Hub_Logo.png" alt="Logo"></a>
-            <p>BHKi<br>Think It, Code It!!!
-            <p>
+    <nav id="navbar">
+        <div class="head-logo">
+            <a href="index.html">
+                <img src="images/Bioinformatica_Hub_Logo.png" alt="Logo">
+            </a>
+            <p>BHKi<br>Think It, Code It!!!</p>
         </div>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="projects.html">Activities</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link" target="_blank">Join</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
+                    target="_blank">Join</a></li>
             <li><a href="contactus.html" class="active">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="donate.html">DONATE</a></li>
         </ul>
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars fa-fade"></i>
+        </label>
+        <input type="checkbox" id="check">
     </nav>
+
+    <script>
+        const checkBtn = document.getElementById('check');
+        const navMenu = document.querySelector('.nav-menu');
+        const checkBtnIcon = document.querySelector('.checkbtn i');
+
+        checkBtn.addEventListener('click', function () {
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                checkBtnIcon.classList.remove('fa-times');
+                checkBtnIcon.classList.add('fa-bars');
+            } else {
+                navMenu.classList.add('active');
+                checkBtnIcon.classList.remove('fa-bars');
+                checkBtnIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                navbar.style.top = "-100px"; // Adjust this value as needed
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
 
     <section class="contact-section">
         <div class="container">
@@ -64,7 +103,8 @@
                 <ul class="box2">
                     <li class="link_name">Contribute</li>
                     <li><a href="donate.html">DONATE</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link" target="_blank">JOIN US</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
+                            target="_blank">JOIN US</a></li>
                 </ul>
                 <ul class="box2">
                     <li class="link_name">Email Us</li>
