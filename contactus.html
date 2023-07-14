@@ -9,6 +9,19 @@
     <link rel="icon" type="image/x-icon" href="images/Bioinformatica_Hub_Logo.png">
     <link rel="stylesheet" href="stylescontactus.css">
     <script src="https://kit.fontawesome.com/7b668c6785.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script src="https://cdn.emailjs.com/sdk/2.5.1/email.min.js"></script>
+
+    <script src="contact.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("57DST_7m60oEUFDDO");
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -72,23 +85,79 @@
     <section class="contact-section">
         <div class="container">
             <h1>Contact Us</h1>
-            <form method="post" action="mailto:byronryan619@gmail.com">
-                <label for="first_name">First Name</label>
-                <input type="text" id="first_name" name="first_name" required>
-
-                <label for="last_name">Last Name</label>
-                <input type="text" id="last_name" name="last_name" required>
-
+            <form onsubmit="sendMail()">
+                
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Phone Number (Optional)</label>
+                <input type="number" id="phone" name="phone">
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
 
                 <input type="submit" value="Submit">
+                
             </form>
+
         </div>
     </section>
+
+    <!--FAQ SECTION-->
+	<section>
+		<div class="faq-section">
+			<div class="faq-heading">
+				<h1>Frequently Asked Questions</h1>
+			</div>
+			<div class="faq">
+				<h2>How can I join BHKi?<i class="fas fa-angle-down"></i></h2>
+				<p>That’s easy. You can fill out the form on the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdplSNxT4hytikEJL6OuVR3fVzg5sCByZJJL6ah8jaHGZKfhg/viewform?usp=sf_link"
+                    target="_blank"> JOIN US</a> page,
+					pay a small fee of KES 500 or $5, send us an email with the payment details, and you’ll
+					get an email saying you are officially a member.</p>
+				<h2>Do you offer training and what type of training?<i class="fas fa-angle-down"></i></h2>
+				<p>Yes we do offer training. Introduction to Bioinformatics and Open science, programming in
+					Python and R, -omics training such as metagenomics. We also design training material and get
+					instructors so you can request for training in specific areas. Send us an email at <a href="mailto:info@bhki.org">info@bhki.org</a>.
+					Or fill out the contact us form with the inquiry subject: TRAINING</p>
+				<h2>How do I get mentorship?<i class="fas fa-angle-down"></i></h2>
+				<p>You can fill out the contact us form with the inquiry subject: MENTORSHIP writing specific details
+					about what you need specifically, and we will get back to you with someone best suited to answer
+					your questions. </p>
+				<h2>Do you offer internships or attachments?<i class="fas fa-angle-down"></i></h2>
+				<p>Unfortunately we do not offer internships or attachments, but we post opportunities forwarded to us
+					by
+					various organizations on open positions. Always check our website, or your email if you are a member
+					for such details.</p>
+			</div>
+		</div>
+		<script>
+			const faq = document.querySelector('.faq');
+			const questions = faq.querySelectorAll('h2');
+			const answers = faq.querySelectorAll('p');
+
+			questions.forEach((question, index) => {
+				question.addEventListener('click', () => {
+					if (question.classList.contains('active')) {
+						question.classList.remove('active');
+						answers[index].classList.remove('active');
+					} else {
+						questions.forEach((q) => {
+							q.classList.remove('active');
+						});
+						answers.forEach((answer) => {
+							answer.classList.remove('active');
+						});
+						question.classList.add('active');
+						answers[index].classList.add('active');
+					}
+				});
+			});
+		</script>
+	</section>
 
     <!--FOOTER-->
     <footer class="footer" id="scroll-section">
@@ -108,7 +177,8 @@
                 </ul>
                 <ul class="box2">
                     <li class="link_name">Email Us</li>
-                    <li><a href="mailto:bioinformaticshubofkenya@gmail.com">bioinformaticshubofkenya</a></li>
+                    <li><a href="mailto:info@bhki.org">info@bhki.org</a></li>
+                    <li><a href="mailto:info@bhki.org">team@bhki.org</a></li>
                 </ul>
                 <script>
                     function sendEmail() {
@@ -119,7 +189,7 @@
                         }
                         var subject = "New email subscription.";
                         var body = "Hello! \nI am subscribing to BHKi newsletter and would like to receive notifications on the following e-mail: " + email + "\n\n";
-                        var mailtoLink = "mailto:byronryan619@outlook.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                        var mailtoLink = "mailto:bioinformaticshubofkenya@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
                         window.location.href = mailtoLink;
                         alert("Thank you for subscribing with email: " + email);
                         document.getElementById("email").value = "";
@@ -171,8 +241,8 @@
 
         <div class="bottom-copyright">
             <div class="bottom-details">
-                <span class="copyright_text">Copyright &#169; 2023 | BHKi | All Rights Reserved
-                    <span class="dev_text">Made by <a href="https://github.com/ByronOndari">Byron Ondari</a></span>
+                <span class="copyright_text">
+                    Copyright &#169; 2023 | BHKi | All Rights Reserved
                 </span>
             </div>
         </div>

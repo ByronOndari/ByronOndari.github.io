@@ -38,12 +38,12 @@ nav ul li a {
   text-decoration: none;
   color: #0b76a0;
   /*#888*/
-  padding: 0.625rem 0.625rem;
-  font-size: 1rem;
+  padding: 0.25rem 0.25rem;
+  font-size: 0.85rem;
   background: none;
   position: relative;
   cursor: pointer;
-  margin-left: 1.25rem;
+  margin-left: 1rem;
 }
 
 nav ul li:first-child a {
@@ -68,9 +68,9 @@ nav img {
 }
 
 nav p {
-  margin: 0.3rem 0 0.25rem 0.625rem;
+  margin: 0.45rem 0 0.25rem 0.625rem;
   color: #0b76a0;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
 }
 
 nav ul li a.active {
@@ -98,68 +98,68 @@ nav ul li a.active:hover {
   display: none;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 768px) {
   nav {
-      padding: 0 20px;
+    padding: 0 20px;
   }
 
   nav ul {
-      flex-direction: column;
-      justify-content: center;
-      position: fixed;
-      top: 7.5rem;
-      left: -110%;
-      width: 100vw;
-      height: 60vh;
-      background-color: #061e45;
-      text-align: center;
-      transition: all .5s;
-      z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 7.5rem;
+    left: -110%;
+    width: 100vw;
+    height: 60vh;
+    background-color: #061e45;
+    text-align: center;
+    transition: all .5s;
+    z-index: 99;
   }
 
   nav ul li {
-      margin: 0 auto;
-      line-height: 1px;
+    margin: 0 auto;
+    line-height: 1px;
   }
 
   nav ul li a {
-      margin: 0 auto;
-      font-size: 1.75rem;
-      display: block;
-      padding: 2rem;
-      color: #0b76a0;
-      text-align: center;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    display: block;
+    padding: 2rem;
+    color: #0b76a0;
+    text-align: center;
   }
 
   .nav-menu.active {
-      left: 0%;
-      margin: 0 auto;
+    left: 0%;
+    margin: 0 auto;
   }
 
   .close-btn {
-      position: absolute;
-      top: 0;
-      right: 20px;
-      font-size: 30px;
-      color: #fff;
-      text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
   }
 
   #check:checked~nav ul {
-      left: 0;
+    left: 0;
   }
 
   .checkbtn {
-      display: block;
+    display: block;
   }
 
   .checkbtn:before {
-      content: "\2715";
-      font-size: 24px;
-      position: absolute;
-      top: 22px;
-      right: 20px;
-      display: none;
+    content: "\2715";
+    font-size: 24px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    display: none;
   }
 }
 
@@ -167,15 +167,15 @@ nav ul li a.active:hover {
 /*CONTACT SECTION*/
 .contact-section {
   background-color: #061e45;
-  padding: 20px 25px;
+  padding: 18px 23px;
 }
 
 .container {
-  margin: 20vh auto 5vh auto;
+  margin: 15vh auto 5vh auto;
   /* Add space at the top and bottom, and center horizontally */
-  padding: 20px 25px;
+  padding: 16px 20px;
   background-color: #fff;
-  max-width: 600px;
+  max-width: 400px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -185,6 +185,7 @@ nav ul li a.active:hover {
 h1 {
   text-align: center;
   color: #061e45;
+  font-size: 0.95rem;
 }
 
 form {
@@ -197,12 +198,12 @@ label {
   color: #000;
 }
 
-label[for="first_name"],
-label[for="last_name"],
+label[for="name"],
 label[for="email"],
+label[for="phone"],
 label[for="message"] {
   color: #061e45;
-  font-size: 14px;
+  font-size: 0.7rem;
 }
 
 
@@ -219,17 +220,17 @@ textarea {
 
 input[type="submit"] {
   margin-top: 10px;
+  width: 6rem;
   background-color: #3e8e41;
   color: #fff;
-  font-weight: bold;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.75rem;
 }
 
 input[type="submit"]:hover {
   background-color: #3e8e41;
-  color: #061e45;
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
 }
 
 textarea {
@@ -237,6 +238,94 @@ textarea {
   resize: none;
 }
 
+
+/*FAQ SECTION*/
+.faq-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.faq-heading {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: #061e45;
+}
+
+@media(max-width: 952px) {
+  .faq-heading {
+    font-size: 14px
+  }
+}
+
+
+/*FAQ SECTION*/
+.faq {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 10px 10px 10px;
+}
+
+.faq h2 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding: 10px;
+  color: #fff;
+  background-color: #061e45;
+  border: 1px solid #061e45;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+@media(max-width: 952px) {
+  .faq h2 {
+    font-size: 14px
+  }
+}
+
+.faq h2.active {
+  background-color: #fff;
+  color: #061e45;
+  transition: .2s;
+}
+
+.faq i {
+  color: #fff;
+}
+
+.faq p {
+  font-size: 16px;
+  line-height: 1.4;
+  display: none;
+  margin-bottom: 16px;
+  padding: 10px;
+  color: #061e45;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media(max-width: 952px) {
+  .faq p {
+    font-size: 11px
+  }
+}
+
+.fas {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+
+.faq p.active {
+  display: block;
+  transition: .2s;
+}
 
 /*FOOTER*/
 
@@ -261,10 +350,8 @@ textarea {
 .footer .content {
   background-color: #061e45;
   max-width: 78.125rem;
-  /* Changed from px to rem */
   margin: auto;
   padding: 1.875rem 2.5rem 0.625rem 2.5rem;
-  /* Changed from px to rem */
 }
 
 .footer .content .top {
@@ -274,14 +361,11 @@ textarea {
   justify-content: space-between;
   margin-top: 1%;
   padding: 2.8125rem 0 0 0;
-  /* Changed from px to rem */
 }
 
 .content .top .logo-details img {
-  width: 3.5rem;
-  /* Changed from px to rem */
-  height: 3.625rem;
-  /* Changed from px to rem */
+  width: 3rem;
+  height: 3.25rem;
 }
 
 .media-icons {
@@ -293,23 +377,18 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.125rem;
-  /* Changed from px to rem */
-  height: 3.125rem;
-  /* Changed from px to rem */
+  width: 3.025rem;
+  height: 3.025rem;
   border-radius: 50%;
   border: 0.125rem solid #fff;
   margin: 0 0 0 0.375rem;
-  /* Changed from px to rem */
   background-color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .media-icons svg {
-  width: 1.5625rem;
-  /* Changed from px to rem */
-  height: 1.5625rem;
-  /* Changed from px to rem */
+  width: 1.3625rem;
+  height: 1rem;
   fill: #061e45;
 }
 
@@ -324,12 +403,10 @@ textarea {
 }
 
 .content .link-boxes .box2 .link_name {
-  color: #43c7fc;
-  font-size: 1.125rem;
-  /* Changed from px to rem */
+  color: #c3e3eb;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0.625rem;
-  /* Changed from px to rem */
   position: relative;
 }
 
@@ -338,23 +415,19 @@ textarea {
   position: absolute;
   left: 0;
   bottom: -0.125rem;
-  /* Changed from px to rem */
   height: 1px;
   width: 3.125rem;
-  /* Changed from px to rem */
   background: #fff;
 }
 
 .content .link-boxes .box2 li {
   margin: 0.375rem 0;
-  /* Changed from px to rem */
   list-style: none;
 }
 
 .content .link-boxes .box2 li a {
   color: #fff;
-  font-size: 0.875rem;
-  /* Changed from px to rem */
+  font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
@@ -368,43 +441,33 @@ textarea {
 
 .content .link-boxes .input-box {
   margin-right: 3.4375rem;
-  /* Changed from px to rem */
 }
 
 .link-boxes .input-box input {
-  height: 2.5rem;
-  /* Changed from px to rem */
+  height: 2.3rem;
   width: calc(100% + 3.4375rem);
-  /* Changed from px to rem */
   outline: none;
   border: 0.125rem solid #afafb6;
   background: #061e45;
   border-radius: 0.25rem;
-  /* Changed from px to rem */
   padding: 0 0.9375rem;
-  /* Changed from px to rem */
   font-size: 0.9375rem;
-  /* Changed from px to rem */
   color: #fff;
   margin-top: 0.3125rem;
-  /* Changed from px to rem */
 }
 
 .link-boxes .input-box input::placeholder {
   color: #afafb6;
-  font-size: 1rem;
-  /* Changed from px to rem */
+  font-size: 0.8rem;
 }
 
 .link-boxes .input-box input[type="button"] {
   background-color: #fff;
   color: #061e45;
   border: none;
-  font-size: 1.125rem;
-  /* Changed from px to rem */
+  font-size: 0.85rem;
   font-weight: 500;
   margin: 0.25rem 0;
-  /* Changed from px to rem */
   opacity: 0.8;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -419,118 +482,102 @@ textarea {
   width: 100%;
   background-color: #fff;
   color: #061e45;
+  font-size: 0.75rem;
 }
 
 .footer .bottom-details .copyright_text {
-  max-width: 78.125rem;
-  /* Changed from px to rem */
-  margin: auto;
+  text-align: center;
   padding: 0.5rem 2.5rem;
-  /* Changed from px to rem */
-  display: flex;
-  justify-content: space-between;
+  display: flex ;
+  justify-content: center;
   align-items: center;
-}
-
-.footer .bottom-details .dev_text a {
-  color: #c01212;
 }
 
 /* Styles for mobile */
 @media (max-width: 767px) {
   .footer .bottom-details .copyright_text {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.25rem;
-    /* Changed from px to rem */
+      flex-direction: column;
+      text-align: center;
+      padding: 1.25rem;
   }
 
   .footer .bottom-details .dev_text {
-    margin-top: 0.625rem;
-    /* Changed from px to rem */
+      margin-top: 0.625rem;
   }
 
   .footer::before {
-    display: none;
+      display: none;
   }
 }
 
 @media (max-width: 900px) {
   .footer .content .link-boxes {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
   }
 
   .footer .content .link-boxes .input-box {
-    width: 40%;
-    margin-top: 0.625rem;
-    /* Changed from px to rem */
-  }
-  
-  .footer::before {
-    display: none;
+      width: 40%;
+      margin-top: 0.625rem;
   }
 
   .logo-name {
-    display: none;
+      display: none;
+  }
+
+  .footer::before {
+      display: none;
   }
 }
 
 @media (max-width: 1240px) {
   .logo-name {
-    display: none;
+      display: none;
   }
 }
 
 @media (max-width: 700px) {
   .footer {
-    position: relative;
+      position: relative;
   }
 
   .content .top .logo-details {
-    font-size: 1.625rem;
-    /* Changed from px to rem */
+      font-size: 1.625rem;
   }
 
   .content .top .media-icons a {
-    height: 2.1875rem;
-    /* Changed from px to rem */
-    width: 2.1875rem;
-    /* Changed from px to rem */
-    font-size: 0.875rem;
-    /* Changed from px to rem */
-    line-height: 2.1875rem;
-    /* Changed from px to rem */
+      height: 2.1875rem;
+      width: 2.1875rem;
+      font-size: 0.875rem;
+      line-height: 2.1875rem;
   }
 
   .footer .content .link-boxes .box2 {
-    width: calc(100% / 0.5 - 0.625rem);
+      width: calc(100% / 0.5 - 0.625rem);
   }
 
   .footer .content .link-boxes .input-box {
-    width: 60%;
+      width: 60%;
   }
 }
 
 @media (max-width: 520px) {
   .footer::before {
-    top: 9.0625rem;
-    /* Changed from px to rem */
+      top: 9.0625rem;
   }
 
   .footer .content .top {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .content .top .media-icons {
-    margin-top: 1rem;
-    /* Changed from px to rem */
+      margin-top: 1rem;
   }
 
   .footer .content .link-boxes .box2 {
-    width: calc(100% / 0.5 - 0.625rem);
+      width: calc(100% / 0.5 - 0.625rem);
   }
 
   .footer .content .link-boxes .input-box {
-    width: 100%;
+      width: 100%;
   }
 }

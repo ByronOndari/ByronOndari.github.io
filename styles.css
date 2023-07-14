@@ -38,12 +38,12 @@ nav ul li a {
     text-decoration: none;
     color: #0b76a0;
     /*#888*/
-    padding: 0.625rem 0.625rem;
-    font-size: 1rem;
+    padding: 0.25rem 0.25rem;
+    font-size: 0.85rem;
     background: none;
     position: relative;
     cursor: pointer;
-    margin-left: 1.25rem;
+    margin-left: 1rem;
 }
 
 nav ul li:first-child a {
@@ -68,9 +68,9 @@ nav img {
 }
 
 nav p {
-    margin: 0.3rem 0 0.25rem 0.625rem;
+    margin: 0.45rem 0 0.25rem 0.625rem;
     color: #0b76a0;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
 }
 
 nav ul li a.active {
@@ -98,7 +98,7 @@ nav ul li a.active:hover {
     display: none;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 768px) {
     nav {
         padding: 0 20px;
     }
@@ -166,7 +166,7 @@ nav ul li a.active:hover {
 
 /* HomePage */
 .Home-page {
-    height: 35rem;
+    height: 29rem;
     width: 100%;
     background-color: #061e45;
     background-image: linear-gradient(rgba(179, 176, 176, 0.85), rgba(218, 218, 218, 0.8)), url(images/teamphoto.jpg);
@@ -181,10 +181,8 @@ nav ul li a.active:hover {
 }
 
 .text-box h1 {
-    font-size: 3.625rem;
-    /* Changed from px to rem */
-    padding-top: 11.875rem;
-    /* Changed from px to rem */
+    font-size: 2.25rem;
+    padding-top: 9.875rem;
     margin-bottom: 1%;
     color: #43c7fc;
     text-align: center;
@@ -204,7 +202,6 @@ nav ul li a.active:hover {
 
     50% {
         color: #08435a;
-        /* Change to the desired color */
     }
 
     100% {
@@ -215,12 +212,10 @@ nav ul li a.active:hover {
 .text-box p {
     width: 80%;
     margin: 0 auto;
-    font-size: 1.25rem;
-    /* Changed from px to rem */
+    font-size: 0.95rem;
     color: #061e45;
     text-align: center;
     padding: 0.625rem 0 0.0625rem 0rem;
-    /* Changed from px to rem */
 }
 
 /* BUTTON */
@@ -229,7 +224,6 @@ nav ul li a.active:hover {
     justify-content: center;
     cursor: pointer;
     margin: 2.5rem 0 0.3125rem 0rem;
-    /* Changed from px to rem */
 }
 
 button {
@@ -237,14 +231,11 @@ button {
     position: relative;
     color: #061e45;
     padding: 1em;
-    font-size: 0.9375rem;
-    /* Changed from px to rem */
+    font-size: 0.75rem;
     background: transparent;
     border: 0.1rem solid #061e45;
-    /* Changed from px to rem */
     transition: all 0.3s;
     border-radius: 1.25rem;
-    /* Changed from px to rem */
 }
 
 button a {
@@ -257,9 +248,27 @@ button:hover {
 }
 
 /* Media Queries */
+@media (max-width: 920px) {
+    .text-box {
+        padding-top: 4rem;
+        /* Adjust the padding as needed for mobile layout */
+    }
+}
+@media (max-width: 830px) {
+    .text-box {
+        padding-top: 3rem;
+        /* Adjust the padding as needed for mobile layout */
+    }
+}
+
 @media (max-width: 768px) {
     .Home-page {
-        height: auto;
+        height: 35rem;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        /* or use 'cover' if you prefer */
+        background-position: center;
+        /* adjust the position as needed */
     }
 
     .text-box {
@@ -279,13 +288,19 @@ button:hover {
     }
 
     .button1 {
-        margin-top: 2.5rem;
+        margin: 2.5rem 0 2rem 0;
         /* Adjust the margin as needed for mobile layout */
     }
 
     button {
         font-size: 0.875rem;
         /* Adjust the font size as needed for mobile layout */
+    }
+}
+
+@media (max-width: 362px) {
+    .Home-page {
+        height: 45rem;
     }
 }
 
@@ -304,13 +319,13 @@ button:hover {
     flex: 1;
     color: #061e45;
     padding: 0.75rem;
-    max-width: 55%;
+    max-width: 47%;
     /* Set a maximum width of 50% for both divs */
 }
 
 .vision h1,
 .mission h1 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     margin-bottom: 1.25rem;
     color: #061e45;
     text-align: center;
@@ -318,7 +333,7 @@ button:hover {
 
 .vision p,
 .mission p {
-    font-size: 1.125rem;
+    font-size: 0.85rem;
     line-height: 1.6;
     text-align: center;
     display: flex;
@@ -330,7 +345,7 @@ button:hover {
 /* Optional: Add styling for vertical line */
 .vertical-line {
     display: inline-block;
-    width: 0.125rem;
+    width: 0.05rem;
     height: 13.375rem;
     background-color: #afafb6;
     margin: 0 1.25rem;
@@ -374,14 +389,14 @@ button:hover {
 
 /* Drive-By */
 .drive {
-    background-color: #43c7fc;
-    padding: 3.125rem 0;
-    height: 29rem;
+    background-color: #c3e3eb;
+    padding: 3.125rem;
+    height: 27rem;
 }
 
 .drive h1 {
     color: #061e45;
-    font-size: 2rem;
+    font-size: 1.25rem;
     text-align: center;
     margin-bottom: 1.875rem;
 }
@@ -396,7 +411,7 @@ button:hover {
 
 .column {
     flex-basis: 30%;
-    padding: 1.875rem;
+    padding: 1.9rem;
     background-color: #061e45;
     color: #fff;
     margin: 0.625rem;
@@ -412,13 +427,13 @@ button:hover {
 }
 
 .column h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-top: 0;
-    color: #43c7fc;
+    color: #c3e3eb;
 }
 
 .column p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     color: #fff;
     margin-top: 0.625rem;
@@ -427,7 +442,7 @@ button:hover {
 /* Media Queries */
 @media (max-width: 768px) {
     .drive {
-        height: 47rem;
+        height: 51rem;
     }
 
     .row {
@@ -439,7 +454,7 @@ button:hover {
         flex-basis: 100%;
         margin: 0.625rem 0;
         border-radius: 0;
-        background-color: #43c7fc;
+        background-color: #c3e3eb;
     }
 
     .drive h1 {
@@ -454,6 +469,19 @@ button:hover {
 
     .column p {
         font-size: 0.875rem;
+        color: #061e45;
+    }
+}
+
+@media (max-width: 380px) {
+    .drive {
+        height: 55rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .drive {
+        height: 85rem;
     }
 }
 
@@ -461,24 +489,19 @@ button:hover {
 .Approach {
     background-color: #061e45;
     padding: 3.125rem 0 0.125rem 0;
-    /* Changed from px to rem */
     color: #fff;
     text-align: center;
 }
 
 .Approach h2 {
-    font-size: 2rem;
-    /* Changed from px to rem */
+    font-size: 1.25rem;
     margin-bottom: 1.25rem;
-    /* Changed from px to rem */
 }
 
 .Approach p {
-    font-size: 1.125rem;
-    /* Changed from px to rem */
+    font-size: 0.85rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    /* Changed from px to rem */
 }
 
 .cards {
@@ -490,11 +513,8 @@ button:hover {
 .card {
     flex-basis: 30%;
     padding: 1.25rem;
-    /* Changed from px to rem */
     margin: 0.625rem;
-    /* Changed from px to rem */
     border-radius: 1.25rem;
-    /* Changed from px to rem */
     background-color: #061e45;
     color: #fff;
     text-align: center;
@@ -502,25 +522,19 @@ button:hover {
 }
 
 .card h3 {
-    font-size: 1.5em;
-    /* Changed from px to rem */
+    font-size: 1.25em;
     margin-top: 0;
     margin-bottom: 0.325rem;
-    /* Changed from px to rem */
 }
 
 .card img {
     width: 4rem;
-    /* Changed from px to rem */
     height: 4rem;
-    /* Changed from px to rem */
     margin-bottom: 0.625rem;
-    /* Changed from px to rem */
 }
 
 .card p {
-    font-size: .9rem;
-    /* Changed from px to rem */
+    font-size: 0.7rem;
     line-height: 1.5;
     margin-top: 0;
     text-align: center;
@@ -540,23 +554,17 @@ button:hover {
 
     .card img {
         width: 3rem;
-        /* Changed from px to rem */
         height: 3rem;
-        /* Changed from px to rem */
     }
 
     .Approach h2 {
         font-size: 1.5rem;
-        /* Changed from px to rem */
         margin-bottom: 1rem;
-        /* Changed from px to rem */
     }
 
     .Approach p {
         font-size: 1rem;
-        /* Changed from px to rem */
         margin-bottom: 2rem;
-        /* Changed from px to rem */
     }
 }
 
@@ -564,43 +572,45 @@ button:hover {
 .Solution {
     background-color: #fff;
     padding: 1.25rem;
-    /* Changed from px to rem */
     text-align: center;
 }
 
 .Solution h2 {
-    font-size: 2rem;
-    /* Changed from px to rem */
+    font-size: 1.25rem;
     color: #061e45;
 }
 
 .Solution p {
-    font-size: 1rem;
-    /* Changed from px to rem */
+    font-size: 0.75rem;
     color: #061e45;
     line-height: 1.6rem;
     margin-bottom: 2.5rem;
-    /* Changed from px to rem */
 }
 
 .sol-section {
     display: flex;
     justify-content: space-evenly;
     margin: 1rem 0 1.5rem 0;
-    /* Changed from px to rem */
+}
+
+.sol-section a {
+    text-decoration: none;
+}
+
+.sol-section p {
+    color: #c3e3eb;
+    text-align: left;
+    font-size: 0.7rem;
 }
 
 .sol-card {
     position: relative;
-    width: 22.5rem;
-    /* Changed from px to rem */
-    height: 18rem;
-    padding: 1.75rem;
-    /* Changed from px to rem */
+    width: 19rem;
+    height: 24rem;
+    padding: 1.95rem;
     background-color: #061e45;
     box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
     border-radius: 0.375rem;
-    /* Changed from px to rem */
     transition: transform 0.1s ease;
     overflow: hidden;
 }
@@ -649,28 +659,24 @@ button:hover {
 .sol-card-overlay p {
     color: #fff;
     padding: 2.75em;
-    font-size: 0.875rem;
-    /* Changed from px to rem */
+    font-size: 0.8rem;
     z-index: 1;
     text-align: center;
 }
 
 .sol-card img {
     width: 100%;
-    height: 12.5rem;
-    /* Changed from px to rem */
+    height: 8rem;
     object-fit: cover;
     border-radius: 0.375rem;
-    /* Changed from px to rem */
 }
 
 .sol-card h4 {
-    margin-top: .5rem;
-    /* Changed from px to rem */
-    font-size: 1.25rem;
-    /* Changed from px to rem */
-    color: #43c7fc;
+    margin: .5rem 0 .5rem 0;
+    font-size: 0.85rem;
+    color: #fff;
     z-index: 1;
+    text-align: left;
 }
 
 
@@ -701,9 +707,9 @@ button:hover {
 /* Our Impact */
 .impact-section h2 {
     text-align: center;
-    font-size: 2rem;
-    color: #fff;
-    background-color: #061e45;
+    font-size: 1.25rem;
+    color: #061e45;
+    background-color: #c3e3eb;
     padding: 1.25em;
 }
 
@@ -713,7 +719,7 @@ button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 0rem;
-    background-color: #061e45;
+    background-color: #c3e3eb;
     color: #fff;
     padding: 0em .25em 2.75em .25em;
     text-align: center;
@@ -721,9 +727,9 @@ button:hover {
 
 .Impact p {
     text-align: left;
-    color: #fff;
-    padding: 0 1.25rem 1.25rem 1.25rem;
-    font-size: 1.25rem;
+    color: #061e45;
+    padding: 0 0.25rem 1.25rem 1.25rem;
+    font-size: 0.95rem;
 }
 
 .section-content {
@@ -738,8 +744,8 @@ button:hover {
 
 #counter1,
 #counter2 {
-    font-size: 4rem;
-    color: #43c7fc;
+    font-size: 2.5rem;
+    color: green;
 }
 
 #target1,
@@ -780,41 +786,32 @@ button:hover {
 /* Styles for desktop */
 .patner {
     width: 100%;
-    /* Changed from px to % */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0%;
-    /* Changed from px to % */
     padding-top: 0;
     padding-bottom: 2%;
-    /* Changed from px to % */
     background: #fff;
     margin-bottom: 0%;
-    /* Changed from px to % */
     border-radius: 0rem;
-    /* Changed from px to rem */
 }
 
 .patner h1 {
-    font-size: 2.2rem;
-    /* Changed from px to rem */
+    font-size: 1.25rem;
     color: #061e45;
     background-color: #fff;
     margin-top: 0.25rem;
-    /* Changed from px to rem */
     padding: 1.25em;
 }
 
 .patner hr,
 .impact-section hr {
     border: none;
-    height: .5px;
+    height: 0.5px;
     background-color: #061e45;
     margin-top: 0.25rem;
-    /* Changed from px to rem */
     margin-bottom: 1.25rem;
-    /* Changed from px to rem */
 }
 
 .patner .row2 {
@@ -829,14 +826,10 @@ button:hover {
 .patner .img3,
 .patner .img4,
 .patner .img5 {
-    height: 6.75rem;
-    /* Changed from px to rem */
-    width: 10.0rem;
-    /* Changed from px to rem */
+    height: 5.75rem;
+    width: 7.5rem;
     padding: 0.75rem;
-    /* Changed from px to rem */
     margin: 1.625rem;
-    /* Changed from px to rem */
     object-fit: contain;
     background-color: #fff;
 }
@@ -846,7 +839,6 @@ button:hover {
 @media (max-width: 767px) {
     .patner h1 {
         font-size: 1.25rem;
-        /* Changed from px to rem */
     }
 
     .patner .img1,
@@ -855,9 +847,7 @@ button:hover {
     .patner .img4,
     .patner .img5 {
         height: 3.75rem;
-        /* Changed from px to rem */
         width: 8.125rem;
-        /* Changed from px to rem */
     }
 }
 
@@ -909,10 +899,8 @@ button:hover {
 .footer .content {
     background-color: #061e45;
     max-width: 78.125rem;
-    /* Changed from px to rem */
     margin: auto;
     padding: 1.875rem 2.5rem 0.625rem 2.5rem;
-    /* Changed from px to rem */
 }
 
 .footer .content .top {
@@ -922,14 +910,11 @@ button:hover {
     justify-content: space-between;
     margin-top: 1%;
     padding: 2.8125rem 0 0 0;
-    /* Changed from px to rem */
 }
 
 .content .top .logo-details img {
-    width: 3.5rem;
-    /* Changed from px to rem */
-    height: 3.625rem;
-    /* Changed from px to rem */
+    width: 3rem;
+    height: 3.25rem;
 }
 
 .media-icons {
@@ -941,23 +926,18 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.125rem;
-    /* Changed from px to rem */
-    height: 3.125rem;
-    /* Changed from px to rem */
+    width: 3.025rem;
+    height: 3.025rem;
     border-radius: 50%;
     border: 0.125rem solid #fff;
     margin: 0 0 0 0.375rem;
-    /* Changed from px to rem */
     background-color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .media-icons svg {
-    width: 1.5625rem;
-    /* Changed from px to rem */
-    height: 1.5625rem;
-    /* Changed from px to rem */
+    width: 1.3625rem;
+    height: 1rem;
     fill: #061e45;
 }
 
@@ -972,12 +952,10 @@ button:hover {
 }
 
 .content .link-boxes .box2 .link_name {
-    color: #43c7fc;
-    font-size: 1.125rem;
-    /* Changed from px to rem */
+    color: #c3e3eb;
+    font-size: 0.9rem;
     font-weight: 400;
     margin-bottom: 0.625rem;
-    /* Changed from px to rem */
     position: relative;
 }
 
@@ -986,23 +964,19 @@ button:hover {
     position: absolute;
     left: 0;
     bottom: -0.125rem;
-    /* Changed from px to rem */
     height: 1px;
     width: 3.125rem;
-    /* Changed from px to rem */
     background: #fff;
 }
 
 .content .link-boxes .box2 li {
     margin: 0.375rem 0;
-    /* Changed from px to rem */
     list-style: none;
 }
 
 .content .link-boxes .box2 li a {
     color: #fff;
-    font-size: 0.875rem;
-    /* Changed from px to rem */
+    font-size: 0.85rem;
     font-weight: 400;
     text-decoration: none;
     opacity: 0.8;
@@ -1016,43 +990,33 @@ button:hover {
 
 .content .link-boxes .input-box {
     margin-right: 3.4375rem;
-    /* Changed from px to rem */
 }
 
 .link-boxes .input-box input {
-    height: 2.5rem;
-    /* Changed from px to rem */
+    height: 2.3rem;
     width: calc(100% + 3.4375rem);
-    /* Changed from px to rem */
     outline: none;
     border: 0.125rem solid #afafb6;
     background: #061e45;
     border-radius: 0.25rem;
-    /* Changed from px to rem */
     padding: 0 0.9375rem;
-    /* Changed from px to rem */
     font-size: 0.9375rem;
-    /* Changed from px to rem */
     color: #fff;
     margin-top: 0.3125rem;
-    /* Changed from px to rem */
 }
 
 .link-boxes .input-box input::placeholder {
     color: #afafb6;
-    font-size: 1rem;
-    /* Changed from px to rem */
+    font-size: 0.8rem;
 }
 
 .link-boxes .input-box input[type="button"] {
     background-color: #fff;
     color: #061e45;
     border: none;
-    font-size: 1.125rem;
-    /* Changed from px to rem */
+    font-size: 0.85rem;
     font-weight: 500;
     margin: 0.25rem 0;
-    /* Changed from px to rem */
     opacity: 0.8;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -1067,23 +1031,16 @@ button:hover {
     width: 100%;
     background-color: #fff;
     color: #061e45;
+    font-size: 0.75rem;
 }
 
 .footer .bottom-details .copyright_text {
-    max-width: 78.125rem;
-    /* Changed from px to rem */
-    margin: auto;
+    text-align: center;
     padding: 0.5rem 2.5rem;
-    /* Changed from px to rem */
-    display: flex;
-    justify-content: space-between;
+    display: flex ;
+    justify-content: center;
     align-items: center;
 }
-
-.footer .bottom-details .dev_text a {
-    color: #c01212;
-}
-
 
 /* Styles for mobile */
 @media (max-width: 767px) {
@@ -1091,12 +1048,10 @@ button:hover {
         flex-direction: column;
         text-align: center;
         padding: 1.25rem;
-        /* Changed from px to rem */
     }
 
     .footer .bottom-details .dev_text {
         margin-top: 0.625rem;
-        /* Changed from px to rem */
     }
 
     .footer::before {
@@ -1112,7 +1067,6 @@ button:hover {
     .footer .content .link-boxes .input-box {
         width: 40%;
         margin-top: 0.625rem;
-        /* Changed from px to rem */
     }
 
     .logo-name {
@@ -1137,18 +1091,13 @@ button:hover {
 
     .content .top .logo-details {
         font-size: 1.625rem;
-        /* Changed from px to rem */
     }
 
     .content .top .media-icons a {
         height: 2.1875rem;
-        /* Changed from px to rem */
         width: 2.1875rem;
-        /* Changed from px to rem */
         font-size: 0.875rem;
-        /* Changed from px to rem */
         line-height: 2.1875rem;
-        /* Changed from px to rem */
     }
 
     .footer .content .link-boxes .box2 {
@@ -1163,7 +1112,6 @@ button:hover {
 @media (max-width: 520px) {
     .footer::before {
         top: 9.0625rem;
-        /* Changed from px to rem */
     }
 
     .footer .content .top {
@@ -1172,7 +1120,6 @@ button:hover {
 
     .content .top .media-icons {
         margin-top: 1rem;
-        /* Changed from px to rem */
     }
 
     .footer .content .link-boxes .box2 {

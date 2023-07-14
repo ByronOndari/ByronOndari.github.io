@@ -38,12 +38,12 @@ nav ul li a {
   text-decoration: none;
   color: #0b76a0;
   /*#888*/
-  padding: 0.625rem 0.625rem;
-  font-size: 1rem;
+  padding: 0.25rem 0.25rem;
+  font-size: 0.85rem;
   background: none;
   position: relative;
   cursor: pointer;
-  margin-left: 1.25rem;
+  margin-left: 1rem;
 }
 
 nav ul li:first-child a {
@@ -68,9 +68,9 @@ nav img {
 }
 
 nav p {
-  margin: 0.3rem 0 0.25rem 0.625rem;
+  margin: 0.45rem 0 0.25rem 0.625rem;
   color: #0b76a0;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
 }
 
 nav ul li a.active {
@@ -98,70 +98,71 @@ nav ul li a.active:hover {
   display: none;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 768px) {
   nav {
-      padding: 0 20px;
+    padding: 0 20px;
   }
 
   nav ul {
-      flex-direction: column;
-      justify-content: center;
-      position: fixed;
-      top: 7.5rem;
-      left: -110%;
-      width: 100vw;
-      height: 60vh;
-      background-color: #061e45;
-      text-align: center;
-      transition: all .5s;
-      z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 7.5rem;
+    left: -110%;
+    width: 100vw;
+    height: 60vh;
+    background-color: #061e45;
+    text-align: center;
+    transition: all .5s;
+    z-index: 99;
   }
 
   nav ul li {
-      margin: 0 auto;
-      line-height: 1px;
+    margin: 0 auto;
+    line-height: 1px;
   }
 
   nav ul li a {
-      margin: 0 auto;
-      font-size: 1.75rem;
-      display: block;
-      padding: 2rem;
-      color: #0b76a0;
-      text-align: center;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    display: block;
+    padding: 2rem;
+    color: #0b76a0;
+    text-align: center;
   }
 
   .nav-menu.active {
-      left: 0%;
-      margin: 0 auto;
+    left: 0%;
+    margin: 0 auto;
   }
 
   .close-btn {
-      position: absolute;
-      top: 0;
-      right: 20px;
-      font-size: 30px;
-      color: #fff;
-      text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
   }
 
   #check:checked~nav ul {
-      left: 0;
+    left: 0;
   }
 
   .checkbtn {
-      display: block;
+    display: block;
   }
 
   .checkbtn:before {
-      content: "\2715";
-      font-size: 24px;
-      position: absolute;
-      top: 22px;
-      right: 20px;
-      display: none;
+    content: "\2715";
+    font-size: 24px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    display: none;
   }
 }
+
 
 
 /*DONATE SECTION*/
@@ -173,12 +174,36 @@ nav ul li a.active:hover {
 }
 
 .modal {
-  margin: 140px 10px 30px 10px;
+  margin: 5.5rem 0.625rem 1.875rem 0.625rem;
   width: fit-content;
   height: fit-content;
   background-color: #fff;
   border-radius: 26px;
-  max-width: 450px;
+  max-width: 400px;
+}
+
+@media(max-width: 1280px) {
+  .modal {
+    margin: 9rem 0.625rem 1.875rem 0.625rem;
+  }
+}
+
+@media(max-width: 952px) {
+  .modal {
+    margin: 9rem 0.625rem 1.875rem 0.625rem;
+  }
+}
+
+@media(max-width: 822px) {
+  .modal {
+    margin: 13rem 0.625rem 1.875rem 0.625rem;
+  }
+}
+
+@media(max-width: 770px) {
+  .modal {
+    margin: 10rem 0.625rem 1.875rem 0.625rem;
+  }
 }
 
 .form {
@@ -206,11 +231,11 @@ nav ul li a.active:hover {
 }
 
 .payment--options button svg {
-  height: 18px;
+  height: 16px;
 }
 
 .payment--options button:last-child svg {
-  height: 22px;
+  height: 20px;
 }
 
 .separator {
@@ -227,7 +252,7 @@ nav ul li a.active:hover {
   display: block;
   text-align: center;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 9px;
   margin: auto;
 }
 
@@ -265,14 +290,14 @@ nav ul li a.active:hover {
 }
 
 .input_label {
-  font-size: 10px;
+  font-size: 8px;
   color: #8B8E98;
   font-weight: 600;
 }
 
 .input_field {
   width: auto;
-  height: 40px;
+  height: 37px;
   padding: 0 0 0 16px;
   border-radius: 9px;
   outline: none;
@@ -288,15 +313,16 @@ nav ul li a.active:hover {
 }
 
 .purchase--btn {
-  height: 55px;
+  height: 40px;
+  width: 30%;
   background: #F2F2F2;
   border-radius: 11px;
   border: 0;
   outline: none;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
-  background: linear-gradient(180deg, #1db22a 0%, #22b324 50%, #22b92e 100%);
+  background: linear-gradient(180deg, #3e8e41 0%, #3e8e41 50%, #3e8e41 100%);
   box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
@@ -325,13 +351,13 @@ nav ul li a.active:hover {
 .faq-heading {
   margin-bottom: 30px;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   color: #061e45;
 }
 
 @media(max-width: 952px) {
   .faq-heading {
-    font-size: 16px
+    font-size: 14px
   }
 }
 
@@ -344,7 +370,7 @@ nav ul li a.active:hover {
 }
 
 .faq h2 {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 16px;
   padding: 10px;
   color: #fff;
@@ -363,7 +389,7 @@ nav ul li a.active:hover {
 }
 
 .faq h2.active {
-  background-color: #0b76a0;
+  background-color: #fff;
   color: #061e45;
   transition: .2s;
 }
@@ -404,7 +430,6 @@ nav ul li a.active:hover {
   transition: .2s;
 }
 
-
 /*FOOTER*/
 
 .footer {
@@ -428,10 +453,8 @@ nav ul li a.active:hover {
 .footer .content {
   background-color: #061e45;
   max-width: 78.125rem;
-  /* Changed from px to rem */
   margin: auto;
   padding: 1.875rem 2.5rem 0.625rem 2.5rem;
-  /* Changed from px to rem */
 }
 
 .footer .content .top {
@@ -441,14 +464,11 @@ nav ul li a.active:hover {
   justify-content: space-between;
   margin-top: 1%;
   padding: 2.8125rem 0 0 0;
-  /* Changed from px to rem */
 }
 
 .content .top .logo-details img {
-  width: 3.5rem;
-  /* Changed from px to rem */
-  height: 3.625rem;
-  /* Changed from px to rem */
+  width: 3rem;
+  height: 3.25rem;
 }
 
 .media-icons {
@@ -460,23 +480,18 @@ nav ul li a.active:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.125rem;
-  /* Changed from px to rem */
-  height: 3.125rem;
-  /* Changed from px to rem */
+  width: 3.025rem;
+  height: 3.025rem;
   border-radius: 50%;
   border: 0.125rem solid #fff;
   margin: 0 0 0 0.375rem;
-  /* Changed from px to rem */
   background-color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .media-icons svg {
-  width: 1.5625rem;
-  /* Changed from px to rem */
-  height: 1.5625rem;
-  /* Changed from px to rem */
+  width: 1.3625rem;
+  height: 1rem;
   fill: #061e45;
 }
 
@@ -491,12 +506,10 @@ nav ul li a.active:hover {
 }
 
 .content .link-boxes .box2 .link_name {
-  color: #43c7fc;
-  font-size: 1.125rem;
-  /* Changed from px to rem */
+  color: #c3e3eb;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0.625rem;
-  /* Changed from px to rem */
   position: relative;
 }
 
@@ -505,23 +518,19 @@ nav ul li a.active:hover {
   position: absolute;
   left: 0;
   bottom: -0.125rem;
-  /* Changed from px to rem */
   height: 1px;
   width: 3.125rem;
-  /* Changed from px to rem */
   background: #fff;
 }
 
 .content .link-boxes .box2 li {
   margin: 0.375rem 0;
-  /* Changed from px to rem */
   list-style: none;
 }
 
 .content .link-boxes .box2 li a {
   color: #fff;
-  font-size: 0.875rem;
-  /* Changed from px to rem */
+  font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
@@ -535,43 +544,33 @@ nav ul li a.active:hover {
 
 .content .link-boxes .input-box {
   margin-right: 3.4375rem;
-  /* Changed from px to rem */
 }
 
 .link-boxes .input-box input {
-  height: 2.5rem;
-  /* Changed from px to rem */
+  height: 2.3rem;
   width: calc(100% + 3.4375rem);
-  /* Changed from px to rem */
   outline: none;
   border: 0.125rem solid #afafb6;
   background: #061e45;
   border-radius: 0.25rem;
-  /* Changed from px to rem */
   padding: 0 0.9375rem;
-  /* Changed from px to rem */
   font-size: 0.9375rem;
-  /* Changed from px to rem */
   color: #fff;
   margin-top: 0.3125rem;
-  /* Changed from px to rem */
 }
 
 .link-boxes .input-box input::placeholder {
   color: #afafb6;
-  font-size: 1rem;
-  /* Changed from px to rem */
+  font-size: 0.8rem;
 }
 
 .link-boxes .input-box input[type="button"] {
   background-color: #fff;
   color: #061e45;
   border: none;
-  font-size: 1.125rem;
-  /* Changed from px to rem */
+  font-size: 0.85rem;
   font-weight: 500;
   margin: 0.25rem 0;
-  /* Changed from px to rem */
   opacity: 0.8;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -586,21 +585,15 @@ nav ul li a.active:hover {
   width: 100%;
   background-color: #fff;
   color: #061e45;
+  font-size: 0.75rem;
 }
 
 .footer .bottom-details .copyright_text {
-  max-width: 78.125rem;
-  /* Changed from px to rem */
-  margin: auto;
+  text-align: center;
   padding: 0.5rem 2.5rem;
-  /* Changed from px to rem */
-  display: flex;
-  justify-content: space-between;
+  display: flex ;
+  justify-content: center;
   align-items: center;
-}
-
-.footer .bottom-details .dev_text a {
-  color: #c01212;
 }
 
 /* Styles for mobile */
@@ -609,16 +602,14 @@ nav ul li a.active:hover {
       flex-direction: column;
       text-align: center;
       padding: 1.25rem;
-      /* Changed from px to rem */
   }
 
   .footer .bottom-details .dev_text {
       margin-top: 0.625rem;
-      /* Changed from px to rem */
   }
 
   .footer::before {
-    display: none;
+      display: none;
   }
 }
 
@@ -630,14 +621,13 @@ nav ul li a.active:hover {
   .footer .content .link-boxes .input-box {
       width: 40%;
       margin-top: 0.625rem;
-      /* Changed from px to rem */
-  }
-
-  .footer::before {
-    display: none;
   }
 
   .logo-name {
+      display: none;
+  }
+
+  .footer::before {
       display: none;
   }
 }
@@ -655,18 +645,13 @@ nav ul li a.active:hover {
 
   .content .top .logo-details {
       font-size: 1.625rem;
-      /* Changed from px to rem */
   }
 
   .content .top .media-icons a {
       height: 2.1875rem;
-      /* Changed from px to rem */
       width: 2.1875rem;
-      /* Changed from px to rem */
       font-size: 0.875rem;
-      /* Changed from px to rem */
       line-height: 2.1875rem;
-      /* Changed from px to rem */
   }
 
   .footer .content .link-boxes .box2 {
@@ -681,7 +666,6 @@ nav ul li a.active:hover {
 @media (max-width: 520px) {
   .footer::before {
       top: 9.0625rem;
-      /* Changed from px to rem */
   }
 
   .footer .content .top {
@@ -690,7 +674,6 @@ nav ul li a.active:hover {
 
   .content .top .media-icons {
       margin-top: 1rem;
-      /* Changed from px to rem */
   }
 
   .footer .content .link-boxes .box2 {
