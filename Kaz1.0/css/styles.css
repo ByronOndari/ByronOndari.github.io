@@ -414,20 +414,12 @@ strong {
 -----------------------------------------*/
 .hero-section {
   background-color: var(--dark-color);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://ucarecdn.com/7c5426d8-fe90-43f6-a745-695b3a6a45ac/mountainslandscape.jpg");
+  background-size: cover;
   position: relative;
   overflow: hidden;
   min-height: 620px;
   text-align: center;
-}
-
-.hero-section::after {
-  background-color: rgba(0, 0, 0, 0.45);
-  border-radius: var(--border-radius-medium);
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
 }
 
 @media screen and (min-width: 991px) {
@@ -473,6 +465,12 @@ strong {
   width: 90%;
   height: 90%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section img {
+    display: none;
+  }
 }
 
 .about-image-wrap {
@@ -675,28 +673,18 @@ input:checked~label .cross:after {
   justify-content: center;
   -webkit-justify-content: center;
   gap: 20px;
-  /* Adds spacing between cards */
   max-width: 1200px;
-  /* Adjusts max width */
   margin: 0 auto;
-  /* Centers the cards container */
 }
 
 .card__img {
   visibility: visible;
-  /* Ensure the element is visible */
   background-size: contain;
-  /* Make the image fully visible */
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Prevent tiling */
   width: 100%;
-  /* Match container width */
   height: 400px;
-  /* Set fixed height */
   border-top-left-radius: 12px;
-  /* Apply border radius */
   border-top-right-radius: 12px;
 }
 
@@ -711,15 +699,11 @@ input:checked~label .cross:after {
 .card__img--hover {
   transition: 0.2s all ease-out;
   background-size: cover;
-  /* Fill the container with the image */
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Prevent tiling */
   width: 100%;
   position: absolute;
   height: 400px;
-  /* Match `.card__img` height */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   top: 0;
@@ -735,9 +719,7 @@ input:checked~label .cross:after {
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
-  /* Limits maximum card size */
   transition: all 0.3s ease;
-  /* Smooth transition */
 }
 
 .card:hover {
@@ -764,13 +746,13 @@ input:checked~label .cross:after {
 .card__title {
   margin-top: 5px;
   margin-bottom: 10px;
+  background-color: var(--white-color);
+  color: var(--dark-color);
 }
 
 .card:hover .card__img--hover {
   height: 400px;
-  /* Maintain the same height */
   opacity: 1;
-  /* Ensure visibility when hovered */
 }
 
 .card:hover .card__info {
@@ -780,6 +762,19 @@ input:checked~label .cross:after {
 
 .card:hover .card__info-hover {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    /* Center the cards horizontally */
+  }
+
+  .card {
+    margin-right: 0;
+    /* Remove horizontal margins */
+  }
 }
 
 /*---------------------------------------
@@ -795,12 +790,12 @@ input:checked~label .cross:after {
 
 .clients {
   width: 100%;
-  height: var(--clients-height);
+  height: fit-content;
   background-color: #000;
   color: #eee;
   overflow: hidden;
   position: relative;
-  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .clients:before,
@@ -873,6 +868,11 @@ input:checked~label .cross:after {
   .clients:before,
   .clients:after {
     width: 5rem;
+  }
+
+  .clients-content li img {
+    width: 80px;
+    height: auto;
   }
 }
 
@@ -1258,12 +1258,7 @@ input:checked~label .cross:after {
   h5 {
     font-size: 20px;
   }
-
-  .hero-section::after {
-    width: 200px;
-    height: 200px;
-  }
-
+  
   .booking-form {
     padding: 35px;
   }
@@ -1333,7 +1328,7 @@ input:checked~label .cross:after {
   =====================================================================CASE STUDIES SECTION START======================================================================        
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .case-studies {
-  padding: 100px;
+  margin-top: 100px;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------
