@@ -5,12 +5,11 @@
 }
 
 body {
-  height: 100vh;
+  height: fit-content;
   display: grid;
   font-family: "Agu Display", sans-serif;
   place-items: center;
   margin: 0;
-  height: 100vh;
   background: linear-gradient(to bottom, #ffffff, #ffffff);
 }
 
@@ -22,8 +21,9 @@ h1 {
 
 h5 {
   color: #008000;
-  position: absolute;
-  bottom: 5px;
+  position: relative;
+  bottom: 0;
+  padding-top: 32px;
 }
 
 a {
