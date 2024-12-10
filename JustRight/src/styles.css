@@ -20,6 +20,16 @@ h1 {
   text-transform: uppercase;
 }
 
+h5 {
+  color: #008000;
+  position: absolute;
+  bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* LOGO */
 .logo {
   position: absolute;
